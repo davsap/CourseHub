@@ -43,6 +43,7 @@ cmake-build-*/
 out/
 target/*/
 
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
@@ -61,3 +62,6 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 coursehubcode.iml
+
+#DataBase Config File
+/src/main/resources/META-INF/persistence.xml
