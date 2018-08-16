@@ -6,10 +6,16 @@ import { NavbarModule } from './navbar/navbar.module';
 import { SecurityModule } from './security/security.module';
 import { UsersModule } from './users/users.module';
 import { ContentModule } from './content/content.module';
+import { InscriptionComponent } from './inscription/inscription.component';
+import { IformateurComponent } from './inscription/iformateur/iformateur.component';
+import { IetudiantComponent } from './inscription/ietudiant/ietudiant.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InscriptionComponent,
+    IformateurComponent,
+    IetudiantComponent
   ],
  imports: [
  BrowserModule, ContentModule, NavbarModule, SecurityModule, UsersModule
