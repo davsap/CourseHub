@@ -1,11 +1,10 @@
 package fr.coursehub.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "Utilisateur")
 public abstract class Utilisatuer  {
 
     public Utilisatuer(){
@@ -20,10 +19,23 @@ public abstract class Utilisatuer  {
     }
 
 
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue
+    protected Integer ID;
+
     protected String prenom;
     protected String nom;
     protected String email;
     protected String phoneNumber;
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
 
     public String getPrenom() {
         return prenom;

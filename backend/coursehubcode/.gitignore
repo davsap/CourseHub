@@ -7,6 +7,8 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/workspace.xml
+.idea/misc.xml
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -43,6 +45,7 @@ cmake-build-*/
 out/
 target/*/
 
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
@@ -61,3 +64,6 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 coursehubcode.iml
+
+#DataBase Config File
+/src/main/resources/META-INF/persistence.xml
