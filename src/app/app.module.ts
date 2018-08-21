@@ -9,6 +9,7 @@ import { ContentModule } from './content/content.module';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { IformateurComponent } from './inscription/iformateur/iformateur.component';
 import { IetudiantComponent } from './inscription/ietudiant/ietudiant.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { IetudiantComponent } from './inscription/ietudiant/ietudiant.component'
     IetudiantComponent
   ],
  imports: [
- BrowserModule, ContentModule, NavbarModule, SecurityModule, UsersModule
+ BrowserModule, ContentModule, NavbarModule, SecurityModule, UsersModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
