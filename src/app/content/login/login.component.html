@@ -1,3 +1,24 @@
-<p>
-  login works!
-</p>
+<div class="container">
+<div class="logincard">
+  <div class="card border-dark mb-3 mt-2" style="width: 40vh;">
+      <div class="card-header title">S'identifier</div>
+      <div class="card-body text-dark">
+        <form>
+            <div class="form-group">
+              <label for="inputIdentifiant">Identifiant</label>
+              <input type="text" class="form-control" id="inputIdentifiant" aria-describedby="identifiantHelp" placeholder="Pseudo">
+            </div>
+            <div class="form-group mt-4">
+              <label for="inputPassword">Mot de passe</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="Mot de passe">
+            </div>
+            <div class="container1">
+            <button type="submit" class="btn btn-white mt-4 align-items-center">Valider</button>
+            <a id="creation" class="form-text text-muted nouveau mt-3" routerLink="/signin">Nouveau sur le site ? <br>Créer un compte</a>
+          </div>
+          </form>
+      </div>
+    </div>
+    </div>
+</div>
+  
