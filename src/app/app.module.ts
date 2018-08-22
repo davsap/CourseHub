@@ -3,25 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NavbarModule } from './navbar/navbar.module';
-import { SecurityModule } from './security/security.module';
+
 import { UsersModule } from './users/users.module';
 import { ContentModule } from './content/content.module';
-import { InscriptionComponent } from './inscription/inscription.component';
-import { IformateurComponent } from './inscription/iformateur/iformateur.component';
-import { IetudiantComponent } from './inscription/ietudiant/ietudiant.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { SidebarModule } from 'ng-sidebar';
+import { SliderModule } from './slider/slider.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InscriptionComponent,
-    IformateurComponent,
-    IetudiantComponent
+   
   ],
  imports: [
- BrowserModule, ContentModule, NavbarModule, SecurityModule, UsersModule, AppRoutingModule
+ BrowserModule, ContentModule, NavbarModule, UsersModule, AppRoutingModule, SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
