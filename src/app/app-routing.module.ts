@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormationComponent } from './content/formation/formation.component';
 import { LoginComponent } from './content/login/login.component';
 import { InscriptionComponent } from './content/inscription/inscription.component';
+import { CoursFormComponent } from './content/cours/coursform/coursform.component';
+import { SujetListComponent } from './content/sujet/sujet-list/sujet-list.component';
 const appRoutes: Routes = [
   { path: '',  redirectTo: '/home',  pathMatch: 'full'},
  { path: 'home', component: HomeComponent },
@@ -12,6 +14,10 @@ const appRoutes: Routes = [
   { path: 'about',  component: HomeComponent},
   { path: 'login',  component: LoginComponent},
   { path: 'signin',  component: InscriptionComponent},
+  // TODO : Supprimer Apres ***************************
+  {path: 'cours', component: CoursFormComponent},
+  {path: 'sujet', component: SujetListComponent}
+  // **************************************************
 ];
 @NgModule({
  imports: [
