@@ -18,7 +18,7 @@
 .btn {
     justify-content: center;
     width: 35%;
-    margin-left: 33%;
+    margin-left: 32%;
 }
 .container1 {
     display: flex;
@@ -27,4 +27,15 @@
     align-content: center;
     text-align: center;
 }
+.ng-valid:not(form)  {
+    border-left: 5px solid rgb(102, 200, 206); /* green */
+  }
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+.errorInput {
+    color: red;
+    font-size: 90%;
+}
+
 

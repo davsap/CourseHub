@@ -9,6 +9,7 @@ import { ContentModule } from './content/content.module';
 import { AppRoutingModule } from './app-routing.module';
 /* import { SidebarModule } from 'ng-sidebar'; */
 import { SliderModule } from './slider/slider.module';
+import { ReactiveFormsModule, FormsModule } from '../../node_modules/@angular/forms';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { SliderModule } from './slider/slider.module';
     AppComponent,
   ],
  imports: [
- BrowserModule, ContentModule, NavbarModule, UsersModule, AppRoutingModule, SliderModule
+ BrowserModule, ContentModule, NavbarModule, UsersModule, AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
