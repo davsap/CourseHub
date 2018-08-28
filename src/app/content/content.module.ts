@@ -12,12 +12,11 @@ import { SujetListComponent } from './sujet/sujet-list/sujet-list.component';
 import { CoursFormComponent } from './cours/coursform/coursform.component';
 import { AccordionModule } from 'ngx-bootstrap';
 import { CoursListComponent } from './cours/cours-list/cours-list.component';
-import { ReactiveFormsModule } from '../../../node_modules/@angular/forms';
 
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), ReactiveFormsModule
+    CommonModule, RouterModule, SliderModule, AccordionModule.forRoot()
   ],
   declarations: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent,
                   InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent],

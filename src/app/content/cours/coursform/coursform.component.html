@@ -1,4 +1,4 @@
-<!-- <div class="container">
+ <div class="container">
   <div class="row">
     <div class="col-sm-2">&nbsp;</div>
     <div class="col-sm-8">
@@ -11,6 +11,10 @@
           <label for="Description">Description</label>
           <textarea type="text" class="form-control" formControlName="Description" aria-describedby="Description help" placeholder="Entrez le Description"></textarea>
         </div>
+        <div class="form-group">
+          <label >Contenu</label>
+          <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
+        </div>
                 
         <button type="submit" class="btn btn-success mb-2">Enregistrer</button>
       </form>
@@ -18,4 +22,3 @@
     <div class="col-sm-2">&nbsp;</div>
   </div>
 </div>
- -->

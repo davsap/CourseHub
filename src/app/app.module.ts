@@ -9,7 +9,8 @@ import { ContentModule } from './content/content.module';
 import { AppRoutingModule } from './app-routing.module';
 /* import { SidebarModule } from 'ng-sidebar'; */
 import { SliderModule } from './slider/slider.module';
-import { ReactiveFormsModule, FormsModule } from '../../node_modules/@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
