@@ -11,11 +11,7 @@
           <label for="Description">Description</label>
           <textarea type="text" class="form-control" formControlName="Description" aria-describedby="Description help" placeholder="Entrez le Description"></textarea>
         </div>
-        <div class="form-group">
-          <label >Contenu</label>
-          <app-ngx-editor [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
-        </div>
-                
+                      
         <button type="submit" class="btn btn-success mb-2">Enregistrer</button>
       </form>
     </div>

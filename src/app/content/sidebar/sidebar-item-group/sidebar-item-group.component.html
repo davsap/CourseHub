@@ -1,0 +1,9 @@
+<a (click)="toggleState()" 
+[ngClass]="{'selected': state === 'show'}" 
+class="dropdown-toggle" >
+  <i [ngClass]="faIcon"></i>
+  {{name}}
+</a>
+<ul [@state]="state" class="list-unstyled">
+  <ng-content></ng-content>
+</ul>
