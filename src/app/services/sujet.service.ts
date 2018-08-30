@@ -14,7 +14,7 @@ const SUJETMOCK = [
   })
 export class SujetService {
   constructor() { }
-  getSujet(formationID: number): Sujet[] {
+  getSujets(formationID: number): Sujet[] {
     return SUJETMOCK;
   }
 }

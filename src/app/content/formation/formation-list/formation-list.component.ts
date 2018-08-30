@@ -7,7 +7,7 @@ import { Formation } from '../../../model/formation';
   styleUrls: ['./formation-list.component.css']
 })
 export class FormationListComponent implements OnInit {
-@Input ()formations:Formation[];
+@Input ()formations: Formation[];
   constructor() { }
 
   ngOnInit() {

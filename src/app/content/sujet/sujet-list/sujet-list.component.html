@@ -3,7 +3,11 @@
     <div class="col-sm-2">&nbsp;</div>
     <div class="col-sm-8">
       <accordion  class="panel panel-info" >
-        <accordion-group heading="Sujet 1" [panelClass]="customClass">
+          <accordion-group *ngFor="let sujet  of sujets" heading="{{sujet.titre}}" [panelClass]="customClass">
+            <!-- TODO :   ajouter async, id de sujet comme parametre -->
+              <app-cours-list [courses]="coursService.courses"></app-cours-list>
+            </accordion-group>
+      <!--   <accordion-group heading="Sujet 1" [panelClass]="customClass">
           <app-cours-list></app-cours-list>
         </accordion-group>
         <accordion-group heading="Sujet 2" [panelClass]="customClass">
@@ -14,7 +18,7 @@
         </accordion-group>
         <accordion-group heading="Sujet 4" [panelClass]="customClass">
             <app-cours-list></app-cours-list>
-        </accordion-group>
+        </accordion-group> -->
       </accordion>
     </div>
   </div>
