@@ -15,14 +15,16 @@ import { CoursListComponent } from './cours/cours-list/cours-list.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormationModule } from './formation/formation.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
-
+import { SujetFormComponent } from './sujet/sujet-form/sujet-form.component';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), FormationModule, ReactiveFormsModule, FormsModule
+    CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), FormationModule, ReactiveFormsModule, FormsModule, QuillModule
   ],
-  declarations: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent,
-                  InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SidebarComponent],
-  exports : [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, InscriptionComponent]
-})
+  declarations: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, SujetFormComponent,
+                  InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SidebarComponent, SujetFormComponent],
+  exports : [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, InscriptionComponent, CoursFormComponent,
+          CoursListComponent, SujetFormComponent]
+  })
 export class ContentModule { }
