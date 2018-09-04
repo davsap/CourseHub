@@ -1,14 +1,15 @@
-<div>
-  <div class="card">
-      <img class="card-img-top" src="{{formation.image}}" alt="Card image cap">
+<div class="container">
+  <div class="card border-info text-dark">
+      <img class="card-img-top spe" src="{{formation.image}}" alt="Card image cap">
       <div class="card-body">
         <p>{{formation.titre}}</p>
-        <p>{{formation.discription}}</p>
-        <p><strong>{{formation.image}}</strong></p>
-        </div>
         
-      <div class="card-footer">
-        <a class="btn btn-primary text-white"><i class="fas fa-cart-plus"></i>Click</a>
+        <!-- <p>{{formation.description}}</p> -->
+        </div>
+        <div><p class="maj">Dernière mise à jour : {{formation.latestUpdate}}</p></div>
+      <div class="card-footer" style="width: 100%">
+        <a class="btn btn-info text-white">Voir la formation</a>
       </div>
     </div>
 </div>
+
