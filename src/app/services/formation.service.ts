@@ -68,4 +68,7 @@ export class FormationService {
      return of(this.formations);
     // return formations;
   }
+  getFormations(): any {
+    return MOCKFORMATION;
+  }
 }

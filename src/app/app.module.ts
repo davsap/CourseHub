@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 /* import { SidebarModule } from 'ng-sidebar'; */
 import { SliderModule } from './slider/slider.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SidebarModule } from './content/sidebar/sidebar.module';
 
 
 
@@ -20,7 +21,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     AppComponent
   ],
  imports: [
- BrowserModule, ContentModule, NavbarModule, UsersModule, AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule
+ BrowserModule, ContentModule, NavbarModule, UsersModule, AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule, SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

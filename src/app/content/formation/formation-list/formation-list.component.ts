@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Formation } from '../../../model/formation';
+import { FormationService } from '../../../services/formation.service';
 
 @Component({
   selector: 'app-formation-list',
@@ -7,10 +8,11 @@ import { Formation } from '../../../model/formation';
   styleUrls: ['./formation-list.component.css']
 })
 export class FormationListComponent implements OnInit {
-@Input ()formations: Formation[];
-  constructor() { }
+formations: Formation[];
+  constructor(private formationService: FormationService) { }
 
   ngOnInit() {
+  this.formations = this.formationService.getFormations();
   }
 
 }

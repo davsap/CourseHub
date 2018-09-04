@@ -7,7 +7,7 @@ import { Formation } from '../../../../model/formation';
   styleUrls: ['./formation-card.component.css']
 })
 export class FormationCardComponent implements OnInit {
-@Input() formation:Formation;
+@Input() formation: Formation;
   constructor() { }
 
   ngOnInit() {

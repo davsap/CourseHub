@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coursehub-web';
-  private _opened: boolean = false;
+  private _opened = false;
 
   private _toggleSidebar() {
     this._opened = !this._opened;

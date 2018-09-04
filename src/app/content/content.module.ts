@@ -23,7 +23,7 @@ import { QuillModule } from 'ngx-quill';
     CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), FormationModule, ReactiveFormsModule, FormsModule, QuillModule
   ],
   declarations: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, SujetFormComponent,
-                  InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SidebarComponent, SujetFormComponent],
+                  InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent],
   exports : [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, InscriptionComponent, CoursFormComponent,
           CoursListComponent, SujetFormComponent]
   })
