@@ -7,21 +7,28 @@ import { LoginComponent } from './content/login/login.component';
 import { InscriptionComponent } from './content/inscription/inscription.component';
 import { CoursFormComponent } from './content/cours/coursform/coursform.component';
 import { SujetListComponent } from './content/sujet/sujet-list/sujet-list.component';
+import { AboutComponent } from './content/about/about.component';
+import { EvaluationComponent } from './evaluation/evaluation.component';
+import { FormationDetailComponent } from './content/formation/formation-detail/formation-detail.component';
+
+
 const appRoutes: Routes = [
   { path: '',  redirectTo: '/home',  pathMatch: 'full'},
  { path: 'home', component: HomeComponent },
   { path: 'formation',  component: FormationComponent},
-  { path: 'about',  component: HomeComponent},
+  { path: 'formation/:id',  component: FormationDetailComponent},
+  { path: 'about',  component: AboutComponent},
   { path: 'login',  component: LoginComponent},
   { path: 'signin',  component: InscriptionComponent},
-  // TODO : Supprimer Apres ***************************
+  // TODO : Supprimer/Modifier Apres ***************************
   {path: 'cours', component: CoursFormComponent},
-  {path: 'sujet', component: SujetListComponent}
+  {path: 'sujet', component: SujetListComponent},
+  {path: 'eval', component: EvaluationComponent},
   // **************************************************
 ];
 @NgModule({
  imports: [
-   RouterModule.forRoot(
+ RouterModule.forRoot(
      appRoutes,
      { enableTracing: false } // <-- debugging purposes only
    )

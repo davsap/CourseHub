@@ -17,14 +17,17 @@ import { FormationModule } from './formation/formation.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SujetFormComponent } from './sujet/sujet-form/sujet-form.component';
 import { QuillModule } from 'ngx-quill';
+import { CoursDetailComponent } from './cours/cours-detail/cours-detail.component';
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), FormationModule, ReactiveFormsModule, FormsModule, QuillModule
+ CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), FormationModule, ReactiveFormsModule, FormsModule,
+     QuillModule
   ],
   declarations: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, SujetFormComponent,
-                  InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent],
-  exports : [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, InscriptionComponent, CoursFormComponent,
-          CoursListComponent, SujetFormComponent]
-  })
+                  InscriptionComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent
+                   , CoursDetailComponent],
+  exports: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, InscriptionComponent, CoursFormComponent,
+       CoursListComponent, SujetFormComponent, CoursDetailComponent]
+      })
 export class ContentModule { }

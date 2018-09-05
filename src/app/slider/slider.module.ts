@@ -11,4 +11,4 @@ import { CarouselModule } from 'ngx-bootstrap';
   declarations: [SliderComponent],
 exports: [SliderComponent]
 })
-export class SliderModule { }
+export class SliderModule {}

@@ -11,17 +11,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { SliderModule } from './slider/slider.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SidebarModule } from './content/sidebar/sidebar.module';
-
-
-
-
+import { EvaluationModule } from './evaluation/evaluation.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
- imports: [
- BrowserModule, ContentModule, NavbarModule, UsersModule, AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule, SidebarModule
+ imports : [
+  BrowserModule, ContentModule, NavbarModule, UsersModule,
+ AppRoutingModule, SliderModule, ReactiveFormsModule
+      , FormsModule, SidebarModule, EvaluationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
