@@ -37,7 +37,7 @@ new Formation(8,
    'Le cours introduit graduellement la notion de variable aléatoire a loi des grands nombres et le théorème de la limite centrale'),
 new Formation(9,
   'Introduction à la théorie de Galois',
-  '20/08/2018', 'assets/images/industry.jpg', 'Le cours expose la théorie de Galois,  '),
+  '20/08/2018', 'assets/images/industry.jpg', 'Le cours expose la théorie de Galois,  ')/* ,
 new Formation(10,
   'Réussir le Changement',
    '22/08/2018', 'assets/images/Manage.jpg',
@@ -49,7 +49,7 @@ new Formation(12,
   'Comment rédiger et publier un article scientifique (Enseignement par projet)',
    '22/08/2018', 'assets/images/sport.jpg',
    'A l’issue de ce cours, vous serez capable de :- de comprendre le contexte et les règles de publication scientifique')
-];
+ */];
 
 @Injectable({
   providedIn: 'root'

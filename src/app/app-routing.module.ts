@@ -10,6 +10,7 @@ import { SujetListComponent } from './content/sujet/sujet-list/sujet-list.compon
 import { AboutComponent } from './content/about/about.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { FormationDetailComponent } from './content/formation/formation-detail/formation-detail.component';
+import { FormationFormComponent } from './content/formation/formation-form/formation-form.component';
 
 
 const appRoutes: Routes = [
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
   { path: 'about',  component: AboutComponent},
   { path: 'login',  component: LoginComponent},
   { path: 'signin',  component: InscriptionComponent},
+  { path: 'formationform',  component: FormationFormComponent },
   // TODO : Supprimer/Modifier Apres ***************************
   {path: 'cours', component: CoursFormComponent},
   {path: 'sujet', component: SujetListComponent},

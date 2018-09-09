@@ -2,16 +2,18 @@
   <div class="card border-info text-dark">
     <img class="card-img-top spe" src="{{formation.image}}" alt="Card image cap">
     <div class="card-body">
-      <p>{{formation.titre}}</p>
+      <a href="#">{{formation.titre}}</a>
 
       <!-- <p>{{formation.description}}</p> -->
     </div>
+
     <div>
       <p class="maj">Dernière mise à jour : {{formation.latestUpdate}}</p>
     </div>
-    <div><app-evaluation></app-evaluation></div>
-    <div class="card-footer" style="width: 100%">
+    
+    <app-evaluation class="rating"></app-evaluation>
+<!--     <div class="card-footer">
       <a class="btn btn-info text-white">Voir la formation</a>
-    </div>
+    </div> -->
   </div>
 </div>
