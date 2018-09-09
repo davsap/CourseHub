@@ -1,3 +1,10 @@
-<p>
-  cours-detail works!
-</p>
+<div class="row" *ngIf='cours!=undefined'>
+  <div class="col-sm-12">{{cours.titre}}</div>
+  <div class="col-sm-12">{{cours.description}}</div>
+  <div class="col-sm-12">{{cours.contenu}}</div>
+  <div class="col-sm-12">
+    <video width="320" height="240" controls>
+      <source src="{{cours.video}}" type="video/mp4">
+    </video>
+  </div>
+</div>

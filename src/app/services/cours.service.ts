@@ -28,4 +28,12 @@ courses: Cours[];
   getCoursListBysujet(sujetID) {
     this.courses = COURSMOCK;
   }
+
+  addCours(cours:Cours): void {
+    // TODO : Should be implemented
+  }
+
+  getCours(id: number): Cours {
+    return null;
+  }
 }

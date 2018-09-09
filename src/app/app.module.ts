@@ -12,7 +12,7 @@ import { SliderModule } from './slider/slider.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SidebarModule } from './content/sidebar/sidebar.module';
 import { EvaluationModule } from './evaluation/evaluation.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +20,7 @@ import { EvaluationModule } from './evaluation/evaluation.module';
  imports : [
   BrowserModule, ContentModule, NavbarModule, UsersModule,
  AppRoutingModule, SliderModule, ReactiveFormsModule
-      , FormsModule, SidebarModule, EvaluationModule
+      , FormsModule, SidebarModule, EvaluationModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

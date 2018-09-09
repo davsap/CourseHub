@@ -19,6 +19,7 @@ import { SujetFormComponent } from './sujet/sujet-form/sujet-form.component';
 import { QuillModule } from 'ngx-quill';
 import { CoursDetailComponent } from './cours/cours-detail/cours-detail.component';
 
+
 @NgModule({
   imports: [
  CommonModule, RouterModule, SliderModule, AccordionModule.forRoot(), FormationModule, ReactiveFormsModule, FormsModule,
