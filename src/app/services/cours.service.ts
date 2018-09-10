@@ -29,7 +29,7 @@ courses: Cours[];
     this.courses = COURSMOCK;
   }
 
-  addCours(cours:Cours): void {
+  addCours(cours: Cours): void {
     // TODO : Should be implemented
   }
 

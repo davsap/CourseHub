@@ -15,13 +15,14 @@ import { FormationFormComponent } from './content/formation/formation-form/forma
 
 const appRoutes: Routes = [
   { path: '',  redirectTo: '/home',  pathMatch: 'full'},
- { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'formation',  component: FormationComponent},
   { path: 'formation/:id',  component: FormationDetailComponent},
   { path: 'about',  component: AboutComponent},
   { path: 'login',  component: LoginComponent},
   { path: 'signin',  component: InscriptionComponent},
   { path: 'formationform',  component: FormationFormComponent },
+  { path: 'formationdetail',  component: FormationDetailComponent },
   // TODO : Supprimer/Modifier Apres ***************************
   {path: 'cours', component: CoursFormComponent},
   {path: 'sujet', component: SujetListComponent},

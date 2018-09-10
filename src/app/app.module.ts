@@ -13,14 +13,15 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SidebarModule } from './content/sidebar/sidebar.module';
 import { EvaluationModule } from './evaluation/evaluation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HttpClientModule } from '../../node_modules/@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent
   ],
  imports : [
   BrowserModule, ContentModule, NavbarModule, UsersModule,
- AppRoutingModule, SliderModule, ReactiveFormsModule
-      , FormsModule, SidebarModule, EvaluationModule, BrowserAnimationsModule
+  AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule,
+  SidebarModule, EvaluationModule, BrowserAnimationsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

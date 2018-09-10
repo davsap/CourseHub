@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { matchOtherValidator } from './MatchOtherValidator';
+import { User } from '../../model/user';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-inscription',
@@ -21,7 +23,9 @@ export class InscriptionComponent implements OnInit {
     'pays': new FormControl()
   });
 
-  constructor(private fb: FormBuilder) { }
+  user: User;
+  constructor(private fb: FormBuilder, private service: UserService) {
+  }
 
   ngOnInit(): void {
   this.signinForm = this.fb.group({
@@ -40,7 +44,18 @@ export class InscriptionComponent implements OnInit {
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn('Formulaire soumis : ' + this.signinForm.value);
+    console.log('Formulaire soumis : ' + this.signinForm.value);
+    this.user = new User (this.signinForm.get('nom').value,
+    this.signinForm.get('prenom').value,
+    this.signinForm.get('email').value,
+    this.signinForm.get('pseudo').value,
+    this.signinForm.get('situation').value,
+    this.signinForm.get('password').value,
+    this.signinForm.get('ville').value,
+    this.signinForm.get('zip').value,
+    this.signinForm.get('pays').value
+  );
+  this.service.addUser(this.user);
   }
 
   get nom() {
@@ -61,9 +76,6 @@ export class InscriptionComponent implements OnInit {
   get password() {
     return this.signinForm.get('password');
   }
-  get password2() {
-    return this.signinForm.get('password2');
-  }
   get ville() {
     return this.signinForm.get('ville');
   }
@@ -75,3 +87,16 @@ export class InscriptionComponent implements OnInit {
   }
 
 }
+
+/* user=new User(null,"","","",null,"M","Perdre",null,null,null);
+  myForm:FormGroup=new FormGroup({
+    "userEmail":new FormControl(null,[Validators.required,Validators.email]),
+    "userName":new FormControl(null,[Validators.maxLength(20)]),
+    "userPassword":new FormControl(null,[Validators.required,Validators.minLength(8)]),
+    "userAge":new FormControl(null,[Validators.required,ValidateDateAge]),
+    "userSexe":new FormControl("M"),
+    "userObjective":new FormControl("Perdre"),
+    "userNiveau":new FormControl(1),
+    "userTaille":new FormControl(null,[Validators.required,Validators.min(120),Validators.max(220)]),
+    "userPoids":new FormControl(null,[Validators.required,Validators.min(35),Validators.max(120)])
+  }); */
