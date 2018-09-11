@@ -76,6 +76,9 @@ export class InscriptionComponent implements OnInit {
   get password() {
     return this.signinForm.get('password');
   }
+  get password2() {
+    return this.signinForm.get('password2');
+  }
   get ville() {
     return this.signinForm.get('ville');
   }
@@ -87,16 +90,3 @@ export class InscriptionComponent implements OnInit {
   }
 
 }
-
-/* user=new User(null,"","","",null,"M","Perdre",null,null,null);
-  myForm:FormGroup=new FormGroup({
-    "userEmail":new FormControl(null,[Validators.required,Validators.email]),
-    "userName":new FormControl(null,[Validators.maxLength(20)]),
-    "userPassword":new FormControl(null,[Validators.required,Validators.minLength(8)]),
-    "userAge":new FormControl(null,[Validators.required,ValidateDateAge]),
-    "userSexe":new FormControl("M"),
-    "userObjective":new FormControl("Perdre"),
-    "userNiveau":new FormControl(1),
-    "userTaille":new FormControl(null,[Validators.required,Validators.min(120),Validators.max(220)]),
-    "userPoids":new FormControl(null,[Validators.required,Validators.min(35),Validators.max(120)])
-  }); */
