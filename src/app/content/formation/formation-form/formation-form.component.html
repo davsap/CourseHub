@@ -1,3 +1,30 @@
-<p>
-  formation-form works!
-</p>
+<div class="container">
+    <div class="title mb-4 mt-3 pt-2 pb-2"><h3><span class="badge badge-primary">Créer une nouvelle formation</span></h3></div>
+    <div class="row">
+    <div class="col-8">
+        <form [formGroup]="formationForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="titre">Titre</label>
+            <input type="text" class="form-control" formControlName="titre" aria-describedby="titre help" placeholder="Entrez le titre">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text" class="form-control" formControlName="description" aria-describedby="Description help"
+              placeholder="Entrez le Description"></textarea>
+          </div>
+          <div class="form-group">
+              <label for="latestUpdate">Dernière mise à jour</label>
+              <input type="text" class="form-control"  formControl="latestUpdate"  placeholder="Entrez la date" id="latestUpdate">
+          </div>
+          <div class="form-group">
+            <label for="imageFormation">Image</label>
+            <input type="file" class="form-control-file" formControlName="imageFormation" id="imageFormation">
+          </div>
+          <div class="form-group">
+          <button type="submit" class="btn btn-outline-primary mt-4">Enregistrer</button>
+        </div>
+      </form>
+      </div>
+  </div>
+</div>
+

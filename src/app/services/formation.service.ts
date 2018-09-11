@@ -80,4 +80,7 @@ formations2: Observable<Formation[]>;
   getFormation(id: Number): Formation {
     return MOCKFORMATION[0];
   }
+  addFormation(formation:Formation){
+    console.log(formation);
+  }
 }
