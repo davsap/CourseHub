@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   { path: 'formationform',  component: FormationFormComponent },
     // TODO : Supprimer/Modifier Apres ***************************
   {path: 'cours', component: CoursFormComponent},
-  {path: 'sujet', component: SujetListComponent},
+  // {path: 'sujet', component: SujetListComponent},
   {path: 'eval', component: EvaluationComponent},
   // **************************************************
 ];

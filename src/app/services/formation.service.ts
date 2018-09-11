@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Formation } from './../model/formation';
 import { of, Observable } from '../../../node_modules/rxjs';
+import { HttpClient } from '../../../node_modules/@angular/common/http';
 
 
 
@@ -16,7 +17,7 @@ new Formation(2,
 new Formation(3,
   'Surveillez la performance de votre application PHP', '22/08/2018',
 './assets/images/technology.jpg', 'Qu\'est-ce qos applications ?'),
-new Formation(4,
+/* new Formation(4,
   'Découvrez les calculs de paie et comment les contrôler',
 '22/08/2018', './assets/images/BTP.jpg', 'Vous trouvez que le cycle de paie e complexe,$e?'),
 new Formation(5,
@@ -37,8 +38,8 @@ new Formation(8,
    'Le cours introduit graduellement la notion de variable aléatoire a loi des grands nombres et le théorème de la limite centrale'),
 new Formation(9,
   'Introduction à la théorie de Galois',
-  '20/08/2018', 'assets/images/industry.jpg', 'Le cours expose la théorie de Galois,  ')/* ,
-new Formation(10,
+  '20/08/2018', 'assets/images/industry.jpg', 'Le cours expose la théorie de Galois,  ')/* , */
+/* new Formation(10,
   'Réussir le Changement',
    '22/08/2018', 'assets/images/Manage.jpg',
   ' L\'accélération de l\'environnement socio-économique  multiplier les projets de changement (nouveaux produits, applications  etc.)'),
@@ -49,7 +50,7 @@ new Formation(12,
   'Comment rédiger et publier un article scientifique (Enseignement par projet)',
    '22/08/2018', 'assets/images/sport.jpg',
    'A l’issue de ce cours, vous serez capable de :- de comprendre le contexte et les règles de publication scientifique')
- */];
+  */];
 
 @Injectable({
   providedIn: 'root'
@@ -57,12 +58,17 @@ new Formation(12,
 
 
 export class FormationService {
+formations: Formation[];
+formations2: Observable<Formation[]>;
+  constructor(private http: HttpClient) { }
 
-  formations: Formation[];
-  constructor() { }
+  getFormationsV2(): Observable<Formation[]> {
+    return this.http.get<any>('http://localhost:8080/CourseHub/api/formations');
+  }
+
   getLatest(): Observable<Formation[]> {
-     this.formations =  new Array(4);
-      for (let i = 0; i < 4; i++) {
+     this.formations =  new Array(2);
+      for (let i = 0; i < 2; i++) {
         this.formations[i] = MOCKFORMATION[i];
      }
      return of(this.formations);
