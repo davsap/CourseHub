@@ -5,12 +5,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormationComponent } from './content/formation/formation.component';
 import { LoginComponent } from './content/login/login.component';
 import { InscriptionComponent } from './content/inscription/inscription.component';
-import { CoursFormComponent } from './content/cours/coursform/coursform.component';
-import { SujetListComponent } from './content/sujet/sujet-list/sujet-list.component';
+import { CoursFormComponent } from './content/formation/sujet/cours/coursform/coursform.component';
 import { AboutComponent } from './content/about/about.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { FormationDetailComponent } from './content/formation/formation-detail/formation-detail.component';
 import { FormationFormComponent } from './content/formation/formation-form/formation-form.component';
+import { SujetListComponent } from './content/formation/sujet/sujet-list/sujet-list.component';
 
 
 const appRoutes: Routes = [

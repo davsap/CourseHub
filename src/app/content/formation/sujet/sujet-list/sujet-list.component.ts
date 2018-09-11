@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SujetService } from './../../../services/sujet.service';
-import { Sujet } from '../../../model/sujet';
-import { CoursService } from './../../../services/cours.service';
+import { SujetService } from '../../../../services/sujet.service';
+import { Sujet } from '../../../../model/sujet';
+import { CoursService } from '../../../../services/cours.service';
+
 
 @Component({
   selector: 'app-sujet-list',
