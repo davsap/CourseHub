@@ -1,1 +1,23 @@
-<app-evaluation></app-evaluation>
+<div class="container" *ngIf='formation!=undefined'>
+  <div class="row">
+    <div class="col-sm-3"> <img class="card-img-top spe" src="{{formation.image}}" alt="Card image cap"></div>
+    <div class="col-sm-9"><h1>{{formation.titre}}</h1></div>
+  </div>
+  <div class="row">
+        <div class="col-sm-12">&nbsp;</div>
+      </div>
+    
+  <div class="row">
+    <div class="col-sm-12">
+        <article><p>
+        {{formation.description}}</p></article></div>
+  </div>
+ <!--  <div class="row">
+    <div class="col-sm-12"><app-sujet-list></app-sujet-list></div>
+  </div> -->
+  <div class="row">
+    <div class="col-sm-12"><app-evaluation></app-evaluation></div>
+  </div>
+</div>
+
+

@@ -71,4 +71,7 @@ export class FormationService {
   getFormations(): any {
     return MOCKFORMATION;
   }
+  getFormation(id: Number): Formation {
+    return MOCKFORMATION[0];
+  }
 }
