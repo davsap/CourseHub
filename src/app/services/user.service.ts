@@ -6,7 +6,8 @@ import { HttpClient, HttpHeaders } from '../../../node_modules/@angular/common/h
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
-    'Authorization': 'my-auth-token'
+    // 'Accept-Content': 'application/json0'
+    // 'Authorization': 'my-auth-token'
   })
 };
 
@@ -19,6 +20,6 @@ user: Observable<User>;
   constructor(private http: HttpClient) { }
 
   addUser(user: User): void {
-    this.http.post('http://localhost:8080/api/users', user, httpOptions).subscribe();
+    this.http.post('http://localhost:8080/CourseHub/api/users', user, httpOptions).subscribe();
   }
 }
