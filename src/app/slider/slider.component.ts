@@ -35,9 +35,9 @@ export class SliderComponent implements OnInit {
     this.formations = value;
     this.slides.push({text : this.formations[0].titre , image :  this.formations[0].image});
 
-    this.formations.forEach(formation => {
+   /* this.formations.forEach(formation => {
        this.slides.push({text : formation.titre , image : formation.image});
-       });
+       });*/
   });
 //
 

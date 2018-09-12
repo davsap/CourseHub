@@ -6,7 +6,7 @@ import { HttpClient } from '../../../node_modules/@angular/common/http';
 
 
 const MOCKFORMATION =
-[new Formation(1,
+[/* new Formation(1,
   'Programmation Web FrontEnd',
  '21/08/2018', './assets/images/aeronau.jpg',
 'Vous souhaitez créer vos propres sites web ? Vous êtes au bon endroit ! Dans ce cours,'),
@@ -16,7 +16,7 @@ new Formation(2,
 'Dans ce cours, nous allons découvrir la puissance des API (Application Programming Interfaces) pour créer des applications plus riches'),
 new Formation(3,
   'Surveillez la performance de votre application PHP', '22/08/2018',
-'./assets/images/technology.jpg', 'Qu\'est-ce qos applications ?'),
+'./assets/images/technology.jpg', 'Qu\'est-ce qos applications ?'), */
 /* new Formation(4,
   'Découvrez les calculs de paie et comment les contrôler',
 '22/08/2018', './assets/images/BTP.jpg', 'Vous trouvez que le cycle de paie e complexe,$e?'),
@@ -67,7 +67,10 @@ formation2: Observable<Formation>;
     return this.http.get<any>('http://localhost:8080/CourseHub/api/formations');
   }
   getFormationV2(id: Number): Observable<Formation> {
-    return this.http.get<any>('http://localhost:8080/CourseHub/api/formations');
+    return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/${id}`);
+  }
+  addFormation(formation2: Formation): void {
+    this.http.post('http://localhost:8080/CourseHub/api/formations', formation2).subscribe(console.log);
   }
 
   getLatest(): Observable<Formation[]> {
@@ -83,8 +86,5 @@ formation2: Observable<Formation>;
   }
   getFormation(id: Number): Formation {
     return MOCKFORMATION[0];
-  }
-  addFormation(formation: Formation) {
-    console.log(formation);
   }
 }

@@ -7,7 +7,7 @@ import { CookieService } from 'ngx-cookie-service';
 
 const httpOptions = {
   headers: new HttpHeaders({
-     'Content-Type': 'application/json',
+    //  'Content-Type': 'application/json',
     // 'Accept-Content': 'application/json',
   })
 };
@@ -22,7 +22,7 @@ export class UserService {
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
   addUser(user: User): void {
-    this.http.post('http://localhost:8080/CourseHub/api/users', user, httpOptions).subscribe(console.log);
+    this.http.post('http://localhost:8080/CourseHub/api/users', user).subscribe(console.log);
   }
 
  /*  logUser(user: User): void {
@@ -35,5 +35,4 @@ export class UserService {
   logUser(user: User): Observable<User> {
     return this.http.post<User>('http://localhost:8080/CourseHub/api/users/login', user, httpOptions);
   }
-
 }
