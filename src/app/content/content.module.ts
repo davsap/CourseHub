@@ -10,13 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormationModule } from './formation/formation.module';
-import { SidebarComponent } from './sidebar/sidebar.component';
-
-
-/*
-
- */
-
+/*import { SidebarComponent } from './sidebar/sidebar.component';*/
 
 
 @NgModule({
