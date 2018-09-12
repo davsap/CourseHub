@@ -15,6 +15,7 @@ export class LoginComponent {
     'password': new FormControl()
   });
 user: User;
+errorMessage: String;
   constructor(private fb: FormBuilder, private service: UserService, private cookieService: CookieService) { }
 
   // tslint:disable-next-line:use-life-cycle-interface
@@ -38,6 +39,8 @@ user: User;
         console.log('name' + this.user);
         this.cookieService.set('token', logedUser.token);
         this.cookieService.set('user', JSON.stringify(logedUser));
+      } else {
+          this.errorMessage = 'Identifiant ou Mot de passe ne corresponde pas reéssayez S.V.P !!!!';
       }
     });
   }

@@ -6,7 +6,7 @@ import { FormationComponent } from './content/formation/formation.component';
 import { LoginComponent } from './content/login/login.component';
 import { InscriptionComponent } from './content/inscription/inscription.component';
 import { CoursFormComponent } from './content/formation/sujet/cours/coursform/coursform.component';
-import { AboutComponent } from './content/about/about.component';
+import { DashboardComponent} from './content/formation/dashboard/dashboard.component';
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { FormationDetailComponent } from './content/formation/formation-detail/formation-detail.component';
 import { FormationFormComponent } from './content/formation/formation-form/formation-form.component';
@@ -18,7 +18,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'formation',  component: FormationComponent},
   { path: 'formation/:id',  component: FormationDetailComponent},
-  { path: 'about',  component: AboutComponent},
+  { path: 'dashboard/:id',  component: DashboardComponent},
   { path: 'login',  component: LoginComponent},
   { path: 'signin',  component: InscriptionComponent},
   { path: 'formationform',  component: FormationFormComponent },
