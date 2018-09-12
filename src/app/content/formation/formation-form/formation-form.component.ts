@@ -23,12 +23,16 @@ export class FormationFormComponent implements OnInit {
 
   onSubmit() {
     console.log('Formulaire soumis : ' + this.formationForm.value);
-  this.formation = new Formation(
+  this.formation = new Formation(null,
     this.formationForm.get('titre').value,
     this.formationForm.get('description').value,
     this.formationForm.get('date').value,
     this.formationForm.get('imageFormation').value);
     this.service.addFormation(this.formation);
+  }
+
+get id() {
+    return this.formationForm.get('id');
   }
 get titre() {
   return this.formationForm.get('titre');

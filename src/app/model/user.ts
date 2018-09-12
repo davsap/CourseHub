@@ -1,4 +1,5 @@
 export class User {
+        id: number;
         nom: String;
         prenom: String;
         email: String;
@@ -10,8 +11,9 @@ export class User {
         pays: String;
         token: string;
 
-        public constructor(nom: String, prenom: String, email: String, pseudo: String, situation: String,
+        public constructor(id: number, nom: String, prenom: String, email: String, pseudo: String, situation: String,
             password: String, ville: String, zip: number, pays: String, token: string) {
+            this.id = id;
             this.nom = nom;
             this.prenom = prenom;
             this.email = email;
