@@ -28,21 +28,18 @@ errorMessage: String;
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn('Formulaire soumis : ' + this.loginForm.value);
     this.user = new User (null, null, null, this.loginForm.get('identifiant').value, null,
     this.loginForm.get('password').value, null, null, null, null);
 
-    this.service.logUser(this.user).subscribe((logedUser: User) => {
-
-      this.user = logedUser;
-      if (this.user != null) {
-        console.log('name' + this.user);
-        this.cookieService.set('token', logedUser.token);
-        this.cookieService.set('user', JSON.stringify(logedUser));
-      } else {
-          this.errorMessage = 'Identifiant ou Mot de passe ne corresponde pas reéssayez S.V.P !!!!';
-      }
-    });
+    this.service.logUser(this.user)
+      .subscribe((logedUser: User) => {
+        this.user = logedUser;
+          if (this.user != null) {
+            console.log('name' + this.user);
+            this.cookieService.set('token', logedUser.token);
+            this.cookieService.set('user', JSON.stringify(logedUser));
+            window.location.href = '/'; }
+          }, err => this.errorMessage = 'Identifiant ou Mot de passe incorret !');
   }
 
   get identifiant() {
