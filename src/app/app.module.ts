@@ -7,7 +7,7 @@ import { NavbarModule } from './navbar/navbar.module';
 import { UsersModule } from './users/users.module';
 import { ContentModule } from './content/content.module';
 import { AppRoutingModule } from './app-routing.module';
-import { SidebarModule } from 'ng-sidebar'; 
+import { SidebarModule } from 'ng-sidebar';
 import { SliderModule } from './slider/slider.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 

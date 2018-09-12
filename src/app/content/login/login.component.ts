@@ -51,6 +51,7 @@ errorMessage: String;
             this.cookieService.set('user', JSON.stringify(logedUser));
             window.location.href = '/'; }
           }, err => this.errorMessage = 'Identifiant ou Mot de passe incorret !');
+
   }
 
   get identifiant() {
