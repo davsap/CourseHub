@@ -25,8 +25,8 @@ const COURSMOCK = [
 export class CoursService {
 courses: Cours[];
   constructor() { }
-  getCoursListBysujet(sujetID) {
-    this.courses = COURSMOCK;
+  getCoursListBysujet(sujetID): Cours[] {
+    return  COURSMOCK;
   }
 
   addCours(cours: Cours): void {

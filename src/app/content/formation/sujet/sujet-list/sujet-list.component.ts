@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SujetService } from '../../../../services/sujet.service';
 import { Sujet } from '../../../../model/sujet';
 import { CoursService } from '../../../../services/cours.service';
@@ -10,7 +10,7 @@ import { CoursService } from '../../../../services/cours.service';
   styleUrls: ['./sujet-list.component.css']
 })
 export class SujetListComponent implements OnInit {
-
+  @Input() formationID: Number;
   sujets: Sujet[];
   constructor(private service: SujetService, private coursService: CoursService) { }
 

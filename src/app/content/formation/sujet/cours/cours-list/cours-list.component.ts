@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cours } from '../../../../../model/cours';
+import { CoursService } from '../../../../../services/cours.service';
 
 @Component({
   selector: 'app-cours-list',
@@ -7,8 +8,11 @@ import { Cours } from '../../../../../model/cours';
   styleUrls: ['./cours-list.component.css']
 })
 export class CoursListComponent implements OnInit {
-@Input() courses: Cours[];
-  constructor() { }
+courses: Cours[];
+@Input() sujetID: Number;
+  constructor(private service: CoursService) {
+    this.courses = service.getCoursListBysujet(this.sujetID);
+  }
 
   ngOnInit() {
     /* console.log('courses ' + this.courses.length);
