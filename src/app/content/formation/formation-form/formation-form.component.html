@@ -1,6 +1,7 @@
 <div class="container">
     <div class="title mb-4 mt-3 pt-2 pb-2"><h3><span class="badge badge-primary">Créer une nouvelle formation</span></h3></div>
-      <div class="col-sm-8">
+    <div class="row">
+    <div class="col-8">
         <form [formGroup]="formationForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label for="titre">Titre</label>
@@ -19,7 +20,11 @@
             <label for="imageFormation">Image</label>
             <input type="file" class="form-control-file" formControlName="imageFormation" id="imageFormation">
           </div>
-          <button type="submit" class="btn btn-success mb-2">Enregistrer</button>
-        </form>
+          <div class="form-group">
+          <button type="submit" class="btn btn-outline-primary mt-4">Enregistrer</button>
+        </div>
+      </form>
       </div>
   </div>
+</div>
+
