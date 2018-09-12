@@ -15,10 +15,10 @@ export class FormationFormComponent implements OnInit {
     date: [null , [Validators.required]],
     imageFormation: [null , [Validators.required]]
   });
-  formation : Formation;
+  formation: Formation;
 
   constructor(private fb: FormBuilder, private service: FormationService) { }
- 
+
   ngOnInit(): void {}
 
   onSubmit() {
@@ -27,19 +27,19 @@ export class FormationFormComponent implements OnInit {
     this.formationForm.get('titre').value,
     this.formationForm.get('description').value,
     this.formationForm.get('date').value,
-    this.formationForm.get('imageFormation').value,);
+    this.formationForm.get('imageFormation').value);
     this.service.addFormation(this.formation);
   }
-get titre(){
-  return this.formationForm.get('titre')
+get titre() {
+  return this.formationForm.get('titre');
 }
-get description(){
-  return this.formationForm.get('description')
+get description() {
+  return this.formationForm.get('description');
 }
-get latestUpdate(){
-  return this.formationForm.get('date')
+get latestUpdate() {
+  return this.formationForm.get('date');
 }
-get imageFormation(){
-  return this.formationForm.get('imageFormation')
+get imageFormation() {
+  return this.formationForm.get('imageFormation');
 }
 }
