@@ -13,13 +13,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SidebarModule } from './content/sidebar/sidebar.module';
 import { EvaluationModule } from './evaluation/evaluation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient, HttpClientModule } from '../../node_modules/@angular/common/http';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
+import { FooterModule } from './footer/footer.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
  imports : [
-  BrowserModule, ContentModule, NavbarModule, UsersModule,
+  BrowserModule, ContentModule, NavbarModule, UsersModule, FooterModule,
   AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule,
   SidebarModule, EvaluationModule, BrowserAnimationsModule, HttpClientModule
   ],
