@@ -12,7 +12,7 @@ export class FormationFormComponent implements OnInit {
   formationForm = this.fb.group({
     titre: [null , [Validators.required, Validators.minLength(1)]],
     description: [null , [Validators.required, Validators.minLength(1)]],
-    latestUpdate: [null , [Validators.required]],
+    date: [null , [Validators.required]],
     imageFormation: [null , [Validators.required]]
   });
   formation : Formation;
@@ -23,12 +23,23 @@ export class FormationFormComponent implements OnInit {
 
   onSubmit() {
     console.log('Formulaire soumis : ' + this.formationForm.value);
-  this.formation = new Formation(1,
+  this.formation = new Formation(
     this.formationForm.get('titre').value,
     this.formationForm.get('description').value,
-    this.formationForm.get('latestUpdate').value,
+    this.formationForm.get('date').value,
     this.formationForm.get('imageFormation').value,);
     this.service.addFormation(this.formation);
   }
-
+get titre(){
+  return this.formationForm.get('titre')
+}
+get description(){
+  return this.formationForm.get('description')
+}
+get latestUpdate(){
+  return this.formationForm.get('date')
+}
+get imageFormation(){
+  return this.formationForm.get('imageFormation')
+}
 }
