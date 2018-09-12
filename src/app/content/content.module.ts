@@ -11,6 +11,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormationModule } from './formation/formation.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 /*
@@ -23,7 +24,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
  CommonModule, RouterModule, SliderModule,  FormationModule, ReactiveFormsModule, FormsModule ],
   declarations: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent,
-                  InscriptionComponent],
+                  InscriptionComponent,
+                  DashboardComponent],
   exports: [ContentComponent, HomeComponent, FormationComponent, AboutComponent, LoginComponent, InscriptionComponent  ]
       })
 export class ContentModule { }

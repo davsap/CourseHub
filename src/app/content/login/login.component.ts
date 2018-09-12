@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { User } from '../../model/user';
 import { UserService } from '../../services/user.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent {
     'password': new FormControl()
   });
 user: User;
-  constructor(private fb: FormBuilder, private service: UserService) { }
+  constructor(private fb: FormBuilder, private service: UserService, private cookieService: CookieService) { }
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit(): void {
@@ -28,8 +29,17 @@ user: User;
     // TODO: Use EventEmitter with form value
     console.warn('Formulaire soumis : ' + this.loginForm.value);
     this.user = new User (null, null, null, this.loginForm.get('identifiant').value, null,
-    this.loginForm.get('password').value, null, null, null);
-    this.service.logUser(this.user);
+    this.loginForm.get('password').value, null, null, null, null);
+
+    this.service.logUser(this.user).subscribe((logedUser: User) => {
+
+      this.user = logedUser;
+      if (this.user != null) {
+        console.log('name' + this.user);
+        this.cookieService.set('token', logedUser.token);
+        this.cookieService.set('user', JSON.stringify(logedUser));
+      }
+    });
   }
 
   get identifiant() {

@@ -14,6 +14,7 @@ import { SidebarModule } from './content/sidebar/sidebar.module';
 import { EvaluationModule } from './evaluation/evaluation.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClient, HttpClientModule } from '../../node_modules/@angular/common/http';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,7 +24,7 @@ import { HttpClient, HttpClientModule } from '../../node_modules/@angular/common
   AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule,
   SidebarModule, EvaluationModule, BrowserAnimationsModule, HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
