@@ -9,19 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FormationModule } from './formation/formation.module';
-<<<<<<< HEAD
-/*import { SidebarComponent } from './sidebar/sidebar.component';*/
-=======
-import { SidebarComponent } from './sidebar/sidebar.component';
-
-
-
-/*
-
- */
-
->>>>>>> f14c721cedf0aeb3c362576800c9b3e6912e0cf8
-
 
 @NgModule({
   imports: [
