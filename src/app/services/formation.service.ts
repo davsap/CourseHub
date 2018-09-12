@@ -67,7 +67,7 @@ formation2: Observable<Formation>;
     return this.http.get<any>('http://localhost:8080/CourseHub/api/formations');
   }
   getFormationV2(id: Number): Observable<Formation> {
-    return this.http.get<any>('http://localhost:8080/CourseHub/api/formations');
+    return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/${id}`);
   }
   addFormation(formation2:Formation): void {
     this.http.post('http://localhost:8080/CourseHub/api/formations', formation2).subscribe(console.log);
