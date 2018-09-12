@@ -13,15 +13,17 @@ import { SujetFormComponent } from './sujet/sujet-form/sujet-form.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap';
 import { QuillModule } from 'ngx-quill';
+import { RouterModule } from '../../../../node_modules/@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule, EvaluationModule,AccordionModule.forRoot(),QuillModule,ReactiveFormsModule, FormsModule
+    CommonModule, EvaluationModule, AccordionModule.forRoot(), QuillModule, ReactiveFormsModule, FormsModule, RouterModule
   ],
   declarations: [FormationCardComponent, FormationListComponent, FormationDetailComponent, FormationFormComponent,
     SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent
     , CoursDetailComponent],
-  exports : [FormationCardComponent, FormationListComponent, FormationDetailComponent, SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent
+  exports : [FormationCardComponent, FormationListComponent, FormationDetailComponent, SujetListComponent, CoursFormComponent,
+    CoursListComponent, SujetFormComponent
     , CoursDetailComponent]
 })
 export class FormationModule { }

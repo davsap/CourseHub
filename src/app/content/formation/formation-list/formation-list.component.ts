@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Formation } from '../../../model/formation';
 import { FormationService } from '../../../services/formation.service';
+import { Observable } from '../../../../../node_modules/rxjs';
 
 @Component({
   selector: 'app-formation-list',
@@ -9,10 +10,10 @@ import { FormationService } from '../../../services/formation.service';
 })
 export class FormationListComponent implements OnInit {
 formations: Formation[];
-  constructor(private formationService: FormationService) { }
+  constructor(private service: FormationService) { }
 
   ngOnInit() {
-  this.formations = this.formationService.getFormations();
+   this.service.getFormationsV2().subscribe((value: Formation[]) => this.formations = value);
   }
 
 }
