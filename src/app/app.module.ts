@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { FooterModule } from './footer/footer.module';
 import { CookieService } from 'ngx-cookie-service';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
