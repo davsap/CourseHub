@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Observable } from '../../../node_modules/rxjs';
 import { User } from '../model/user';
 import { HttpClient, HttpHeaders, HttpResponse } from '../../../node_modules/@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 const httpOptions = {
   headers: new HttpHeaders({

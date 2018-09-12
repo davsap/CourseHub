@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 import { User } from '../../model/user';
 import { UserService } from '../../services/user.service';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
   });
 user: User;
 errorMessage: String;
-  constructor(private fb: FormBuilder, private service: UserService, private cookieService: CookieService) { }
+  constructor(private fb: FormBuilder, private service: UserService, private cookieService: CookieService, private router: Router) { }
 
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit(): void {
@@ -30,6 +31,16 @@ errorMessage: String;
     // TODO: Use EventEmitter with form value
     this.user = new User (null, null, null, this.loginForm.get('identifiant').value, null,
     this.loginForm.get('password').value, null, null, null, null);
+/*
+    const logedUser = this.service.logUser(this.user);
+    if (logedUser != null) {
+      console.log('name' + this.user);
+      this.cookieService.set('token', logedUser.token);
+      this.cookieService.set('user', JSON.stringify(logedUser));
+     const user: User = JSON.parse(this.cookieService.get('user'));
+    } else {
+        this.errorMessage = 'Identifiant ou Mot de passe ne corresponde pas reéssayez S.V.P !!!!';
+    } */
 
     this.service.logUser(this.user)
       .subscribe((logedUser: User) => {
