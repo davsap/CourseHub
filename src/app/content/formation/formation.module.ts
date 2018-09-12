@@ -14,16 +14,16 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap';
 import { QuillModule } from 'ngx-quill';
 import { RouterModule } from '../../../../node_modules/@angular/router';
-
+import {DashboardComponent} from './dashboard/dashboard.component';
 @NgModule({
   imports: [
     CommonModule, EvaluationModule, AccordionModule.forRoot(), QuillModule, ReactiveFormsModule, FormsModule, RouterModule
   ],
   declarations: [FormationCardComponent, FormationListComponent, FormationDetailComponent, FormationFormComponent,
-    SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent
+    SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent, DashboardComponent
     , CoursDetailComponent],
   exports : [FormationCardComponent, FormationListComponent, FormationDetailComponent, SujetListComponent, CoursFormComponent,
-    CoursListComponent, SujetFormComponent
+    CoursListComponent, SujetFormComponent, DashboardComponent
     , CoursDetailComponent]
 })
 export class FormationModule { }

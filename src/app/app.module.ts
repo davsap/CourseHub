@@ -16,18 +16,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { FooterModule } from './footer/footer.module';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-   
+    AppComponent
   ],
  imports : [
   BrowserModule, SidebarModule.forRoot(), ContentModule, NavbarModule, UsersModule, FooterModule,
   AppRoutingModule, SliderModule, ReactiveFormsModule, FormsModule,
   EvaluationModule, BrowserAnimationsModule, HttpClientModule
   ],
-  providers: [],
+  providers: [CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

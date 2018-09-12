@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,4 +32,14 @@ export class AppComponent {
       document.getElementById('sidebar').classList.toggle('expanded');
     }
 
+<<<<<<< HEAD
+=======
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+  }
+
+  constructor() {
+
+  }
+>>>>>>> f14c721cedf0aeb3c362576800c9b3e6912e0cf8
 }
