@@ -2,8 +2,8 @@
   <div class="logincard col-sm-12">
     <div class="card mb-3 mt-2" style="width: 50vh;">
         <div class="card-body text-dark">
-            <div class="alert alert-danger" role="alert" *ngIf=errorMessage !=''>
-                {{errorMessage}}}
+            <div class="alert alert-danger" role="alert" *ngIf="errorMessage !=''">
+                {{errorMessage}}
               </div>
           <h3><span class="badge badge-primary mb-4">S'identifier</span></h3>
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
