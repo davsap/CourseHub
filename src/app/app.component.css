@@ -69,6 +69,8 @@ header,footer {
 
 #main {
     height:80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 footer {

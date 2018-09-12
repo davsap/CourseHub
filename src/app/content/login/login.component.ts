@@ -29,7 +29,7 @@ errorMessage: String;
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    this.user = new User (null, null, null, this.loginForm.get('identifiant').value, null,
+    this.user = new User (null, null, null, null, this.loginForm.get('identifiant').value, null,
     this.loginForm.get('password').value, null, null, null, null);
 /*
     const logedUser = this.service.logUser(this.user);

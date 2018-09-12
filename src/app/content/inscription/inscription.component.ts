@@ -45,7 +45,7 @@ export class InscriptionComponent implements OnInit {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.log('Formulaire soumis : ' + this.signinForm.value);
-    this.user = new User (this.signinForm.get('nom').value,
+    this.user = new User (null, this.signinForm.get('nom').value,
     this.signinForm.get('prenom').value,
     this.signinForm.get('email').value,
     this.signinForm.get('pseudo').value,
@@ -54,11 +54,14 @@ export class InscriptionComponent implements OnInit {
     this.signinForm.get('ville').value,
     this.signinForm.get('zip').value,
     this.signinForm.get('pays').value,
-    ''
+    null
   );
   this.service.addUser(this.user);
   }
 
+  get id() {
+    return this.signinForm.get('id');
+  }
   get nom() {
     return this.signinForm.get('nom');
   }
