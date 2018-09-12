@@ -87,4 +87,8 @@ formation2: Observable<Formation>;
   getFormation(id: Number): Formation {
     return MOCKFORMATION[0];
   }
+
+  getFormationsByUserID(id: number): any {
+    return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/users/${id}`);
+  }
 }

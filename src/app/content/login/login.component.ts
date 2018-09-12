@@ -49,7 +49,7 @@ errorMessage: String;
             console.log('name' + this.user);
             this.cookieService.set('token', logedUser.token);
             this.cookieService.set('user', JSON.stringify(logedUser));
-            window.location.href = '/'; }
+            window.location.href = '/dashboard/' + this.user.id; }
           }, err => this.errorMessage = 'Identifiant ou Mot de passe incorret !');
 
   }
