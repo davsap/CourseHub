@@ -15,10 +15,11 @@ export class SliderComponent implements OnInit {
  myInterval: Number;
   activeSlideIndex = 0;
 
-   slides = [
-    {text : 'Apprenez de  nouvelle technologie', image: 'assets/caros1.jpg'},
-    {text : 'Améllorez vos compétences informatique', image: 'assets/caros6.jpg'},
-    {text : 'Améllorez vos compétences Financier', image: 'assets/caros7.jpg'}
+  slides = [
+    {text : 'Les formations que vous cherchez', image: 'assets/1.jpg'},
+    {text : 'Apprenez à votre rythme', image: 'assets/2.jpg'},
+    {text : 'Echangez avec le monde entier', image: 'assets/3.jpg'},
+    {text : 'Concevez vos formations', image: 'assets/6.jpg'}
   ];
 
   formations: Formation[];
