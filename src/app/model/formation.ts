@@ -4,6 +4,7 @@ export class Formation {
     date: string;
     image: string;
     description: String;
+    userID: number;
 
     constructor(id: number, titre: string, date: string, image: string, description: string) {
       this.id = id;
