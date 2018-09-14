@@ -11,6 +11,7 @@ import { EvaluationComponent } from './evaluation/evaluation.component';
 import { FormationDetailComponent } from './content/formation/formation-detail/formation-detail.component';
 import { FormationFormComponent } from './content/formation/formation-form/formation-form.component';
 import { SujetListComponent } from './content/formation/sujet/sujet-list/sujet-list.component';
+import { FormationAdminComponent } from './content/formation/formation-admin/formation-admin.component';
 
 
 const appRoutes: Routes = [
@@ -22,6 +23,7 @@ const appRoutes: Routes = [
   { path: 'login',  component: LoginComponent},
   { path: 'signin',  component: InscriptionComponent},
   { path: 'formationform',  component: FormationFormComponent },
+  { path: 'formationadmin/:id',  component: FormationAdminComponent },
     // TODO : Supprimer/Modifier Apres ***************************
   {path: 'cours', component: CoursFormComponent},
   // {path: 'sujet', component: SujetListComponent},

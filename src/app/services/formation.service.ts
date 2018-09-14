@@ -60,13 +60,14 @@ new Formation(12,
 export class FormationService {
 formations: Formation[];
 formations2: Observable<Formation[]>;
-formation2: Observable<Formation>;
+// formation2: Observable<Formation>;
+
   constructor(private http: HttpClient) { }
 
   getFormationsV2(): Observable<Formation[]> {
     return this.http.get<any>('http://localhost:8080/CourseHub/api/formations');
   }
-  getFormationV2(id: Number): Observable<Formation> {
+  getFormationV2(id: Number): Observable<any> {
     return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/${id}`);
   }
   addFormation(formation2: Formation): void {
