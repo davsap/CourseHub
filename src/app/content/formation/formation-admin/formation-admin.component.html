@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">{{formation.titre}}</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+        <table border="1">
+            <tbody>
+              <tr *ngFor="let sujet of sujets">
+                <td>
+                  {{sujet.titre}} </td>
+                <td><a><img  src="./../../../../assets/images/admin/edit.png"></a> &nbsp;
+                  <a> <img  src="./../../../../assets/images/admin/removed.png" ></a>&nbsp;
+                  <a> <img  src="./../../../../assets/images/admin/plus.png" ></a>&nbsp;
+                  
+               </td>
+              </tr>
+              <tr >
+                <td>
+                  &nbsp;
+                </td>
+                <td><table>
+                  <tr *ngFor="let cours of sujet.courses" >
+                <td>{{cours.titre}}</td>
+                <td><button><a><img  src="./../../../../assets/images/admin/edit.png"></a></button></td>
+                <td><button><a> <img  src="./../../../../assets/images/admin/removed.png" ></a></button></td>
+              </tr>
+               
+                  </table></td>
+                
+              </tr>
+               
+            </tbody>
+          </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12"></div>
+  </div>
+</div>

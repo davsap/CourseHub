@@ -15,15 +15,17 @@ import { AccordionModule } from 'ngx-bootstrap';
 import { QuillModule } from 'ngx-quill';
 import { RouterModule } from '../../../../node_modules/@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
+import { FormationAdminComponent } from './formation-admin/formation-admin.component';
+
 @NgModule({
   imports: [
     CommonModule, EvaluationModule, AccordionModule.forRoot(), QuillModule, ReactiveFormsModule, FormsModule, RouterModule
   ],
   declarations: [FormationCardComponent, FormationListComponent, FormationDetailComponent, FormationFormComponent,
     SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent, DashboardComponent
-    , CoursDetailComponent],
+    , CoursDetailComponent, FormationAdminComponent],
   exports : [FormationCardComponent, FormationListComponent, FormationDetailComponent, SujetListComponent, CoursFormComponent,
     CoursListComponent, SujetFormComponent, DashboardComponent
-    , CoursDetailComponent]
+    , CoursDetailComponent, FormationAdminComponent]
 })
 export class FormationModule { }

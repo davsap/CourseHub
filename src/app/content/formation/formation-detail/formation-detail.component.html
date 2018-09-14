@@ -3,8 +3,12 @@
     <div class="col-sm-3"> <img class="card-img-top spe" src="{{formation.image}}" alt="Card image cap"></div>
     <div class="col-sm-9"><h1>{{formation.titre}}</h1></div>
   </div>
-  <div *ngIf="showEdit">
-    <button class="success" (click)="showSujetForm">Ajouter Les Sujets des Cours</button>
+  <!-- <div *ngIf="showEdit"> -->
+      <div class="row">
+          <div class="col-sm-12"> <br> </div>
+        </div>
+  <div >
+    <button class="btn btn-outline-success btn-small" (click)="showSujetForm">Ajouter un  module de Cours</button>
   </div>
   <div class="row">
         <div class="col-sm-12">&nbsp;</div>

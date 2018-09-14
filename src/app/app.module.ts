@@ -18,9 +18,10 @@ import { FooterModule } from './footer/footer.module';
 import { CookieService } from 'ngx-cookie-service';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
  imports : [
   BrowserModule, SidebarModule.forRoot(), ContentModule, NavbarModule, UsersModule, FooterModule,
