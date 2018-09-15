@@ -90,6 +90,6 @@ formations2: Observable<Formation[]>;
   }
 
   getFormationsByUserID(id: number): any {
-    return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/users/${id}`);
+    return this.http.get<any>(`http://localhost:8080/CourseHub/api/users/${id}/formations`);
   }
 }

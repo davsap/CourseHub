@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Formation } from '../../../model/formation';
 import { FormationService } from '../../../services/formation.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,10 +10,11 @@ import { FormationService } from '../../../services/formation.service';
 })
 export class DashboardComponent implements OnInit {
   formations: Formation[];
-  constructor(private service: FormationService) { }
+  constructor(private service: FormationService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-   this.service.getFormationsV2().subscribe((value: Formation[]) => this.formations = value);
-  }
+   const id = +this.route.snapshot.paramMap.get('id');
+   this.service.getFormationsByUserID(id).subscribe((value: Formation[]) => this.formations = value);
 
+  }
 }

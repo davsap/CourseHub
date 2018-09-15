@@ -12,7 +12,7 @@
         <li class="nav-item">
           <a class="nav-link pr-3" routerLink="/formation">Formations</a>
         </li>
-          <div *ngIf="show"><a class="nav-link pr-3 ite" routerLink="/about">Mes formations [{{user.pseudo}}]</a></div>
+          <div *ngIf="show"><a class="nav-link pr-3 ite" routerLink="/dashboard/{{user.id}}">Mes formations [{{user.pseudo}}]</a></div>
       </ul>
       <ul class="d-flex flex-row my-2 my-lg-0">
         <li class="nav-item">
