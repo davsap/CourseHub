@@ -17,8 +17,8 @@ export class FormationDetailComponent implements OnInit {
      const id = +this.route.snapshot.paramMap.get('id');
      this.service.getFormationV2(id).subscribe((value: Formation) => this.formation = value);
    }
-   showSujetForm() {
+/*    showSujetForm() {
      const user: User = JSON.parse(this.cookieService.get('user'));
-    }
+    } */
 }
 

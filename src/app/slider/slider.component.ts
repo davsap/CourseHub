@@ -18,7 +18,7 @@ export class SliderComponent implements OnInit {
   slides = [
     {text : 'Les formations que vous cherchez', image: 'assets/1.jpg'},
     {text : 'Apprenez à votre rythme', image: 'assets/2.jpg'},
-    {text : 'Echangez avec le monde entier', image: 'assets/3.jpg'},
+    {text : 'Partagez vos connaissances', image: 'assets/3.jpg'},
     {text : 'Concevez vos formations', image: 'assets/6.jpg'}
   ];
 

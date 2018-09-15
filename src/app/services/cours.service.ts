@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Cours} from './../model/cours';
+import { Observable } from 'rxjs';
+import { HttpClient } from '../../../node_modules/@angular/common/http';
 
 // id: number,  titre: String, description: String,  contenu: String, support: String
 const COURSMOCK = [
@@ -24,13 +26,17 @@ const COURSMOCK = [
 
 export class CoursService {
 courses: Cours[];
-  constructor() { }
+  constructor(private http: HttpClient) { }
   getCoursListBysujet(sujetID): Cours[] {
     return  COURSMOCK;
   }
 
   addCours(cours: Cours): void {
     // TODO : Should be implemented
+  }
+
+  getCoursV2(idf: Number, ids: Number, idc:Number): Observable<any> {
+    return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/${idf}/sujets/${ids}/courses/${idc}`);
   }
 
   getCours(id: number): Cours {

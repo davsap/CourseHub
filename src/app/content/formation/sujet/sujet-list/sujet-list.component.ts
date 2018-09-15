@@ -2,6 +2,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SujetService } from '../../../../services/sujet.service';
 import { Sujet } from '../../../../model/sujet';
 import { CoursService } from '../../../../services/cours.service';
+import { Formation } from '../../../../model/formation';
+import { FormationService } from '../../../../services/formation.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,13 +13,13 @@ import { CoursService } from '../../../../services/cours.service';
   styleUrls: ['./sujet-list.component.css']
 })
 export class SujetListComponent implements OnInit {
-  @Input() formationID: Number;
-  sujets: Sujet[];
-  constructor(private service: SujetService, private coursService: CoursService) { }
+  formation: Formation;
+   constructor(private service: FormationService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.sujets = this.service.getSujets(1);
-    this.coursService.getCoursListBysujet(1);
+   ngOnInit(): void {
+     const id = +this.route.snapshot.paramMap.get('id');
+     this.service.getFormationV2(id).subscribe((value: Formation) => this.formation = value);
+   }
   }
 
-}
+

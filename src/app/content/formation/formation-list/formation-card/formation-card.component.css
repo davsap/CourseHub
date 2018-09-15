@@ -24,4 +24,8 @@ img {
 }
 .card-body {
     height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
