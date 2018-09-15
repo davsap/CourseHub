@@ -10,9 +10,9 @@
           <a class="nav-link pr-3" routerLink="/home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pr-3" routerLink="/formation">Formations</a>
+          <a class="nav-link pr-3 mr-3" routerLink="/formation">Formations</a>
         </li>
-          <div *ngIf="show"><a class="nav-link pr-3 ite" routerLink="/dashboard/{{user.id}}">Mes formations [{{user.pseudo}}]</a></div>
+          <div *ngIf="show"><a class="btn btn-outline-success" routerLink="/dashboard/{{user.id}}">Mes formations [{{user.pseudo}}]</a></div>
       </ul>
       <ul class="d-flex flex-row my-2 my-lg-0">
         <li class="nav-item">
