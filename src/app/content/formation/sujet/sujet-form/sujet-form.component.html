@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-2">&nbsp;</div>
     <div class="col-sm-8">
-      <form [formGroup]="sujetForm">
+      <form [formGroup]="sujetForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for='titre'>
             Titre

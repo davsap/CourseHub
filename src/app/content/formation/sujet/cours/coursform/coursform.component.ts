@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Cours } from '../../../../../model/cours';
 import { CoursService } from '../../../../../services/cours.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-coursform',
@@ -17,20 +18,22 @@ export class CoursFormComponent implements OnInit {
     });
 cours: Cours;
 
-  constructor(private fb: FormBuilder, private service: CoursService) { }
+  constructor(private fb: FormBuilder, private service: CoursService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {}
 
   onSubmit() {
       // TODO: Use EventEmitter with form value
       console.log('Formulaire soumis : ' + this.coursForm.value);
-      this.cours = new Cours(1,
+      const idf = +this.route.snapshot.paramMap.get('id');
+      const ids = +this.route.snapshot.paramMap.get('ids');
+      this.cours = new Cours(null,
       this.coursForm.get('titre').value,
       this.coursForm.get('description').value,
       this.coursForm.get('contenuCours').value,
       this.coursForm.get('coursvideo').value);
       console.log('Formulaire soumis : ' + this.cours.contenu);
-      this.service.addCours(this.cours);
+      this.service.addCoursV2(this.cours, idf, ids);
   }
 
 }

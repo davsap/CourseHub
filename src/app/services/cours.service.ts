@@ -39,6 +39,10 @@ courses: Cours[];
     return this.http.get<any>(`http://localhost:8080/CourseHub/api/formations/${idf}/sujets/${ids}/courses/${idc}`);
   }
 
+  addCoursV2(cours: Cours, idf: number, ids: number) {
+    this.http.post('http://localhost:8080/CourseHub/api/formations/' + idf + '/sujets/' + ids + '/courses', cours).subscribe(console.log);
+  }
+
   getCours(id: number): Cours {
     return null;
   }
