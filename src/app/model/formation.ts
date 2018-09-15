@@ -1,17 +1,20 @@
+import { User } from "src/app/model/user";
+
 export class Formation {
     id: number;
     titre: string;
     date: string;
     image: string;
     description: String;
-    userID: number;
+    user: User;
 
-    constructor(id: number, titre: string, date: string, image: string, description: string) {
+    constructor(id: number, titre: string, description: string, date: string, image: string, user: User) {
       this.id = id;
       this.titre = titre;
+      this.description = description;
       this.date = date;
       this.image = image;
-      this.description = description;
+      this.user = user;
     }
 
 }
