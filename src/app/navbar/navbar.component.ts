@@ -11,7 +11,9 @@ export class NavbarComponent implements OnInit {
 user: User;
 show: boolean;
   constructor(private cookieService: CookieService) { }
-
+  private toggleSideBar() {
+    document.getElementById('sidebar').classList.toggle('expanded');
+  }
   ngOnInit() {
     this.user = JSON.parse(this.cookieService.get('user'));
     if (this.user.pseudo !== null) { this.show = true; }
