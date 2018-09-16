@@ -14,6 +14,7 @@ import { SujetListComponent } from './content/formation/sujet/sujet-list/sujet-l
 import { FormationAdminComponent } from './content/formation/formation-admin/formation-admin.component';
 import { CoursDetailComponent } from './content/formation/sujet/cours/cours-detail/cours-detail.component';
 import { SujetFormComponent } from './content/formation/sujet/sujet-form/sujet-form.component';
+import { UpdateFormationComponent } from './content/formation/update-formation/update-formation.component';
 
 
 const appRoutes: Routes = [
@@ -29,9 +30,17 @@ const appRoutes: Routes = [
   { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent },
   { path: 'formation/:id/sujetform',  component: SujetFormComponent },
   { path: 'formation/:id/sujet/:ids/coursform', component: CoursFormComponent},
+  { path: 'formationupdate/:id', component: UpdateFormationComponent},
   // {path: 'sujet', component: SujetListComponent},
   {path: 'eval', component: EvaluationComponent},
   // **************************************************
+     // ********************************** ADDED BY DAVID 16/09/2018 ******************
+  // ************************************************************************************
+  { path: 'formationadmin/:idf/sujet/:id/cours',  component: CoursFormComponent },
+  { path: 'formationadmin/:idf/sujet/:ids/cours/:id',  component: CoursFormComponent },
+  { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent},
+  { path: 'formationadmin/:id/sujet',  component: SujetFormComponent }
+  // ************************************************************************************
 ];
 @NgModule({
  imports: [

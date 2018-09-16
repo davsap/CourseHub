@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4 ">&nbsp;</div>
-    <div class="col-sm-4 "><span class="badge badge-info "> <h5>Modifiez votre formation</h5> </span></div>
+    <div class="col-sm-4 mb-2 mt-2 "><span class="badge badge-info"> <h5>Modifiez votre formation</h5> </span></div>
     <div class="col-sm-4 "> &nbsp; </div>
   </div>
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 mt-5">
       <h5>{{formation.titre}}  
           &nbsp; <a (click)="editFormation()"> <img src="./../../../../assets/images/admin/edit.png" title="Modifier la formation"></a>
         &nbsp;<a (click)="deleteFormationCours()"> <img src="./../../../../assets/images/admin/remove.png" title="Supprimer la formation"></a>
@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 mb-2 mt-2">
       <button class="btn btn-outline-secondary" (click)="addSujet()">
        Créer un nouveau module
       </button>
@@ -32,11 +32,12 @@
 
   <div class="container ">
     <div class="row" *ngFor="let sujet of formation.sujets ">
-        <div class= "col-sm-12 sujets" >
+        <div class= "col-sm-12 sujets mb-2 mt-2" >
             <!-- a routerLink='/formationadmin/{{formation.id}}/sujet/{{sujet.id}}/cours'> -->
             <a (click)="addCours(sujet.id)"> 
               <img src="./../../../../assets/images/admin/add.png" title="Ajouter un cours"></a>
-              &nbsp; <a (click)="updateModule(sujet.id)"> 
+              &nbsp; 
+            <a (click)="updateModule(sujet.id)"> 
                   <img src="./../../../../assets/images/admin/update.png" title="Modifier le module"></a>
                 
                   &nbsp; <span class="sujetTitre"> {{sujet.titre}}</span>
@@ -48,7 +49,7 @@
           <div class="col-sm-1">
             &nbsp;
           </div>
-          <div class="col-sm-11 cours">
+          <div class="col-sm-11 cours mb-2 mt-2">
         
              <a (click)="editCours(sujet.id,cours.id)">
               <img src="./../../../../assets/images/admin/edit.png" title="Modifier le cours"></a>
