@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { SujetService } from '../../../services/sujet.service';
 import { Observable } from '../../../../../node_modules/rxjs';
 import { FormationService } from '../../../services/formation.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Formation } from '../../../model/formation';
+import { ActivatedRoute } from '../../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-formation-admin',
@@ -11,22 +11,12 @@ import { Formation } from '../../../model/formation';
 })
 export class FormationAdminComponent implements OnInit {
 
-constructor(private service: FormationService, private route: ActivatedRoute, private router: Router) { }
-  formation: Observable<Formation>;
-// formation: Formation;
+constructor(private service: FormationService, private route: ActivatedRoute) { }
+formation: Observable<any>;
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-   this.service.getFormationV2(id).subscribe((value: Observable<Formation>) => this.formation = value);
-    // this.service.getFormationV2(id).subscribe((value: Formation) => this.formation = value);
-    }
+    this.service.getFormationV2(id).subscribe((value: Observable<any>) => this.formation = value);
+  }
 
-    addSujet() {
-      this.router.navigateByUrl('/formationadmin/' + this.route.snapshot.paramMap.get('id') + '/sujet');
-      }
-    addCours(id: any) {
-      console.log('sujet id is :' + id);
-      // routing  : "formationadmin/:idf/sujet/:id/cours"
-     this.router.navigateByUrl('/formationadmin/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + id + '/cours');
-      }
 }
