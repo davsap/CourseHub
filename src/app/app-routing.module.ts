@@ -32,6 +32,13 @@ const appRoutes: Routes = [
   // {path: 'sujet', component: SujetListComponent},
   {path: 'eval', component: EvaluationComponent},
   // **************************************************
+   // ********************************** ADDED BY DAVID 16/09/2018 ******************
+  // ************************************************************************************
+  { path: 'formationadmin/:idf/sujet/:id/cours',  component: CoursFormComponent },
+  { path: 'formationadmin/:idf/sujet/:ids/cours/:id',  component: CoursFormComponent },
+  { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent},
+  { path: 'formationadmin/:id/sujet',  component: SujetFormComponent }
+  // ************************************************************************************
 ];
 @NgModule({
  imports: [
