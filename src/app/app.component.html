@@ -1,27 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="page">
+
     <div id="sidebar" class="sidebar-toggle">
-        <h3>MENU</h3>
-    
-    </div>
-   
-    <div id="content">
+       
+            <div class="nav-link active" routerLink="/home">Home <span class="sr-only">(current)</span></div>
       
-        <header>
+        <ul class="nav flex-column grey lighten-4 py-4">
+
+            <li class="sidebar-nav">
+                <a class="nav-link" routerLink="/formation">Formations </a>
+            </li>
+            <li class="sidebar-nav">
+                <a class="nav-link active" routerLink="/signin">Inscription </a>
+            </li>
+            <li class="sidebar-nav"><a class="nav-link"  routerLink='/sujetform' >Module</a>  
                 
-        <app-navbar></app-navbar> 
-        <div id="sidebar-toggle" (click)="toggleSideBar()">
-                <i class="fa fa-arrow-left" ></i>
+            </li>
+            <li class="sidebar-nav">
+                <a class="nav-link disabled" href="#!">Logout </a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="content">
+
+        <header>
+
+            <app-navbar></app-navbar>
+            <div id="sidebar-toggle" (click)="toggleSideBar()">
+                <i class="fa fa-arrow-left"></i>
             </div>
         </header>
-       
+
         <section id="main">
-            <app-content></app-content> 
+            <app-content></app-content>
         </section>
+
         <footer>
-            <app-footer> </app-footer>  
+            <app-footer> </app-footer>
         </footer>
     </div>
 </div>
-
-

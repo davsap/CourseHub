@@ -33,7 +33,8 @@
               <div>
                   <!-- <h2 style="float:left">{{sujet.titre}}</h2> -->
                   <ol>
-                      <li *ngFor="let cours of sujet.courses"><a class="nav-link" routerLink="/formation/{{formation.id}}/sujet/{{sujet.id}}/cours/{{cours.id}}">{{cours.titre}}</a></li>
+                      <li *ngFor="let cours of sujet.courses"><a class="nav-link" 
+                        routerLink="/formation/{{formation.id}}/sujet/{{sujet.id}}/cours/{{cours.id}}">{{cours.titre}}</a></li>
                   </ol>
                     
               </div>
