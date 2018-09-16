@@ -1,11 +1,11 @@
 
 <div class="container flex-column">
   <h4 class="mb-5">Modifiez votre formation</h4> 
-    <div class="col-sm-12"><h5>{{formation.titre}}</h5></div><h5><span class="badge badge-warning ml-5">Modifier la formation</span><a routerLink="/formation/{{formation.id}}/sujetform" routerLinkActive="router-link-active"><span class="badge badge-success ml-5">Créer un nouveau module</span></a></h5>
-          <div class="col-sm-12" *ngFor="let sujet of formation.sujets">
-              <div class="m-3 ml-5"><h6>{{sujet.titre}}</h6></div> <h5 class="ml-5"> <a routerLink="/formation/{{formation.id}}/sujet/{{sujet.id}}/coursform" routerLinkActive="router-link-active"><span class="badge badge-success ml-5">Créer un nouveau cours</span></a></h5>
+    <div class="col-sm-12"><h5>{{formation.titre}}<img src="./../assets/delete.png" title="Supprimer la formation"></h5></div><h5><a routerLink="/formation/{{formation.id}}/sujetform" routerLinkActive="router-link-active"><span class="badge badge-success ml-5">Créer un nouveau module</span></a></h5>
+          <div class="col-sm-12 module border-top pb-2" *ngFor="let sujet of formation.sujets">
+              <div class="m-3 ml-5"><h6>{{sujet.titre}}<img src="./../assets/delete.png" title="Supprimer le module"></h6></div> <h5 class="ml-5"> <a routerLink="/formation/{{formation.id}}/sujet/{{sujet.id}}/coursform" routerLinkActive="router-link-active"><span class="badge badge-success ml-5">Créer un nouveau cours</span></a></h5>
                   <div class="cours" *ngFor="let cours of sujet.courses">
-                     <p>- {{cours.titre}}<p></div>
+                     <p>- {{cours.titre}}<img src="./../assets/delete.png" title="Supprimer le cours"><p></div>
                    
     </div>
   </div>
