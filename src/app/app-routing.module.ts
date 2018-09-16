@@ -28,7 +28,7 @@ const appRoutes: Routes = [
   { path: 'formationform',  component: FormationFormComponent },
   { path: 'formationadmin/:id',  component: FormationAdminComponent },
   { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent },
-  { path: 'formation/:id/sujetform',  component: SujetFormComponent },
+  /* { path: 'formation/:id/sujetform',  component: SujetFormComponent }, */
   { path: 'formation/:id/sujet/:ids/cours', component: CoursFormComponent},
   { path: 'formationupdate/:id', component: UpdateFormationComponent},
   { path: 'formationupdate/edit/:id', component: FormationFormComponent},
@@ -41,6 +41,7 @@ const appRoutes: Routes = [
   { path: 'formationupdate/:id/sujet/:ids/cours/:idc',  component: CoursFormComponent },
   // { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent},
   { path: 'formationupdate/:id/sujet',  component: SujetFormComponent }
+  { path: 'formationupdate/:id/sujet/:ids',  component: SujetFormComponent }
   // ************************************************************************************
 ];
 @NgModule({

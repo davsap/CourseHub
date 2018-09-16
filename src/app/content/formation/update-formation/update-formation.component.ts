@@ -46,6 +46,9 @@ ngOnInit() {
     this.service.delete(id);
    }
 
+   updateModule(id: any) {
+    this.router.navigateByUrl('/formationupdate/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + id);
+   }
    /*  open(content) {
       this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
         this.closeResult = result;

@@ -19,6 +19,9 @@ export class SujetService {
   getSujetsV2(id: number): Observable<Sujet[]> {
     return this.http.get<any>('http://localhost:8080/CourseHub/api/formations/' + id + '/sujets');
   }
+  getSujet(formationID: number, id: number): Observable<Sujet> {
+    return this.http.get<any>('http://localhost:8080/CourseHub/api/formations/' + formationID + '/sujets/' + id);
+  }
   addSujet(sujet: Sujet, id: number) {
     this.http.post('http://localhost:8080/CourseHub/api/formations/' + id + '/sujets', sujet).subscribe(console.log);
   }
