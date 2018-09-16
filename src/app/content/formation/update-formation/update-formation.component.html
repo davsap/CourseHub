@@ -33,8 +33,8 @@
   <div class="container ">
     <div class="row" *ngFor="let sujet of formation.sujets ">
         <div class= "col-sm-12 sujets mb-2 mt-2" >
-            <!-- a routerLink='/formationadmin/{{formation.id}}/sujet/{{sujet.id}}/cours'> -->
-            <a (click)="addCours(sujet.id)"> 
+           <!-- <a routerLink='/formationadmin/{{formation.id}}/sujet/{{sujet.id}}/cours'>  -->
+             <a (click)="addCours(sujet.id)"> 
               <img src="./../../../../assets/images/admin/add.png" title="Ajouter un cours"></a>
               &nbsp; 
             <a (click)="updateModule(sujet.id)"> 

@@ -29,17 +29,17 @@ const appRoutes: Routes = [
   { path: 'formationadmin/:id',  component: FormationAdminComponent },
   { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent },
   { path: 'formation/:id/sujetform',  component: SujetFormComponent },
-  { path: 'formation/:id/sujet/:ids/coursform', component: CoursFormComponent},
+  { path: 'formation/:id/sujet/:ids/cours', component: CoursFormComponent},
   { path: 'formationupdate/:id', component: UpdateFormationComponent},
   // {path: 'sujet', component: SujetListComponent},
   {path: 'eval', component: EvaluationComponent},
   // **************************************************
      // ********************************** ADDED BY DAVID 16/09/2018 ******************
   // ************************************************************************************
-  { path: 'formationadmin/:idf/sujet/:id/cours',  component: CoursFormComponent },
-  { path: 'formationadmin/:idf/sujet/:ids/cours/:id',  component: CoursFormComponent },
-  { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent},
-  { path: 'formationadmin/:id/sujet',  component: SujetFormComponent }
+   { path: 'formationupdate/:id/sujet/:ids/cours',  component: CoursFormComponent },
+  { path: 'formationupdate/:id/sujet/:ids/cours/:idc',  component: CoursFormComponent },
+  // { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent},
+  { path: 'formationupdate/:id/sujet',  component: SujetFormComponent }
   // ************************************************************************************
 ];
 @NgModule({

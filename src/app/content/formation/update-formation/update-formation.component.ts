@@ -23,15 +23,15 @@ ngOnInit() {
   }
 
   addSujet() {
-    this.router.navigateByUrl('/formationadmin/' + this.route.snapshot.paramMap.get('id') + '/sujet');
+    this.router.navigateByUrl('/formationupdate/' + this.route.snapshot.paramMap.get('id') + '/sujet');
     }
   addCours(sujetid: any) {
- //   console.log('sujet id is :' + id);
-   this.router.navigateByUrl('/formationadmin/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + sujetid + '/cours');
+    // console.log('sujet id is :' + sujetid);
+   this.router.navigateByUrl('/formationupdate/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + sujetid + '/cours');
     }
   editCours(sujetid: any, coursid: any) {
  //   console.log('sujet id is :' + id);
-   this.router.navigateByUrl('/formationadmin/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + sujetid + '/cours/' + coursid);
+   this.router.navigateByUrl('/formationupdate/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + sujetid + '/cours/' + coursid);
     }
 }
 
