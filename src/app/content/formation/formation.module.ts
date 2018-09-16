@@ -16,6 +16,7 @@ import { QuillModule } from 'ngx-quill';
 import { RouterModule } from '../../../../node_modules/@angular/router';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import { FormationAdminComponent } from './formation-admin/formation-admin.component';
+import { UpdateFormationComponent } from './update-formation/update-formation.component';
 
 @NgModule({
   imports: [
@@ -23,9 +24,9 @@ import { FormationAdminComponent } from './formation-admin/formation-admin.compo
   ],
   declarations: [FormationCardComponent, FormationListComponent, FormationDetailComponent, FormationFormComponent,
     SujetListComponent, CoursFormComponent, CoursListComponent, SujetFormComponent, DashboardComponent
-    , CoursDetailComponent, FormationAdminComponent],
+    , CoursDetailComponent, FormationAdminComponent, UpdateFormationComponent],
   exports : [FormationCardComponent, FormationListComponent, FormationDetailComponent, SujetListComponent, CoursFormComponent,
     CoursListComponent, SujetFormComponent, DashboardComponent
-    , CoursDetailComponent, FormationAdminComponent]
+    , CoursDetailComponent, FormationAdminComponent, UpdateFormationComponent]
 })
 export class FormationModule { }
