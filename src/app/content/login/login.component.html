@@ -4,7 +4,7 @@
         <div class="card-body text-dark">
 
             <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
-                {{errorMessage}}}
+                {{errorMessage}}
              </div>
           <h3><span class="badge badge-primary mb-4">S'identifier</span></h3>
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
