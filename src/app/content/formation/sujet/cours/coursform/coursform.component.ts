@@ -17,10 +17,26 @@ export class CoursFormComponent implements OnInit {
       coursvideo: [null , [Validators.required]]
     });
 cours: Cours;
+isUpdate:Boolean = false;
 
-  constructor(private fb: FormBuilder, private service: CoursService, private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private service: CoursService, private route: ActivatedRoute) { 
 
-  ngOnInit(): void {}
+  }
+
+  ngOnInit(): void {
+    const id: any =  this.route.snapshot.paramMap.get('idc');
+    if (id != null) {
+// formationupdate/:id/sujet/:ids/cours/:idc
+        const idf: any = this.route.snapshot.paramMap.get('id');
+        const ids: any = this.route.snapshot.paramMap.get('id');
+       this.service.getCoursV2(idf, ids, id).subscribe((value: Cours) => { this.cours = value;
+        this.isUpdate = true;
+       this.coursForm.controls['titre'].setValue(this.cours.titre);
+       this.coursForm.controls['description'].setValue(this.cours.description);
+       this.coursForm.controls['contenuCours'].setValue(this.cours.contenu);
+       });
+    }
+  }
 
   onSubmit() {
       // TODO: Use EventEmitter with form value
