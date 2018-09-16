@@ -4,6 +4,7 @@ import { FormationService } from '../../../services/formation.service';
 import { Formation } from '../../../model/formation';
 import { User } from 'src/app/model/user';
 import { CookieService } from 'ngx-cookie-service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formation-form',
@@ -20,11 +21,28 @@ export class FormationFormComponent implements OnInit {
   formation: Formation;
   userMock: User;
   user: User;
+  isUpdate:Boolean = false;
 
-  constructor(private fb: FormBuilder, private service: FormationService, private cookieService: CookieService) { }
+  constructor(private fb: FormBuilder, private service: FormationService, private cookieService: CookieService,
+     private route: ActivatedRoute) {
+
+  }
   ngOnInit(): void {
     this.user = JSON.parse(this.cookieService.get('user'));
     this.userMock = new User(this.user.id, null, null, null, null, null, null, null, null, null, null);
+
+    const id: any =  this.route.snapshot.paramMap.get('id');
+    if (id != null) {
+
+       this.service.getFormationV2(id).subscribe((value: Formation) =>{ this.formation = value;
+        this.isUpdate = true;
+       this.formationForm.controls['titre'].setValue(this.formation.titre);
+       this.formationForm.controls['description'].setValue(this.formation.description);
+       this.formationForm.controls['date'].setValue(this.formation.date);
+       });
+    }
+
+
   }
 
   onSubmit() {

@@ -36,6 +36,11 @@ ngOnInit() {
    this.router.navigateByUrl('/formationupdate/' + this.route.snapshot.paramMap.get('id') + '/sujet/' + sujetid + '/cours/' + coursid);
     }
 
+  editFormation() {
+ //   console.log('sujet id is :' + id);
+   this.router.navigateByUrl('/formationupdate/edit/' + this.route.snapshot.paramMap.get('id') );
+    }
+
   deleteFormation() {
     const id: String =  this.route.snapshot.paramMap.get('id');
     this.service.delete(id);

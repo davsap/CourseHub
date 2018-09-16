@@ -31,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'formation/:id/sujetform',  component: SujetFormComponent },
   { path: 'formation/:id/sujet/:ids/cours', component: CoursFormComponent},
   { path: 'formationupdate/:id', component: UpdateFormationComponent},
+  { path: 'formationupdate/edit/:id', component: FormationFormComponent},
   // {path: 'sujet', component: SujetListComponent},
   {path: 'eval', component: EvaluationComponent},
   // **************************************************
