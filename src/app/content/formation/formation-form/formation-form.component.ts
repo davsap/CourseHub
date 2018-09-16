@@ -47,12 +47,17 @@ export class FormationFormComponent implements OnInit {
 
   onSubmit() {
     console.log('Formulaire soumis : ' + this.formationForm.value);
+
+    let pathFile: String;
+    pathFile = this.formationForm.get('imageFormation').value;
+    pathFile = 'assets/images/' +  pathFile.substring(pathFile.lastIndexOf('\\') + 1, pathFile.length);
+
     this.formation = new Formation(
     null,
     this.formationForm.get('titre').value,
     this.formationForm.get('description').value,
     this.formationForm.get('date').value,
-    this.formationForm.get('imageFormation').value,
+    pathFile.toString() ,
     this.userMock);
     this.service.addFormation(this.formation);
   }

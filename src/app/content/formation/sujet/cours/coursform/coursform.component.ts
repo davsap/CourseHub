@@ -19,7 +19,7 @@ export class CoursFormComponent implements OnInit {
 cours: Cours;
 isUpdate:Boolean = false;
 
-  constructor(private fb: FormBuilder, private service: CoursService, private route: ActivatedRoute) { 
+  constructor(private fb: FormBuilder, private service: CoursService, private route: ActivatedRoute) {
 
   }
 
@@ -39,15 +39,21 @@ isUpdate:Boolean = false;
   }
 
   onSubmit() {
+
       // TODO: Use EventEmitter with form value
       console.log('Formulaire soumis : ' + this.coursForm.value);
       const idf = +this.route.snapshot.paramMap.get('id');
       const ids = +this.route.snapshot.paramMap.get('ids');
-      this.cours = new Cours(null,
+      let pathFile: String;
+      pathFile = this.coursForm.get('coursvideo').value;
+      pathFile = 'assets/videos/' +  pathFile.substring(pathFile.lastIndexOf('\\') + 1, pathFile.length);
+/*       test.lastIndexOf('\\');
+       console.log('helooooodsdash  : ' +);
+ */      this.cours = new Cours(null,
       this.coursForm.get('titre').value,
       this.coursForm.get('description').value,
       this.coursForm.get('contenuCours').value,
-      this.coursForm.get('coursvideo').value);
+      pathFile.toString());
       console.log('Formulaire soumis : ' + this.cours.contenu);
       this.service.addCoursV2(this.cours, idf, ids);
   }
