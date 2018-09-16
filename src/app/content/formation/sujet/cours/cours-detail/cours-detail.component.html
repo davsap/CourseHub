@@ -1,4 +1,9 @@
 
+<div class="retour mb-5">
+  <a routerLink='/formation/{{id}}' routerLinkActive="router-link-active" class="btn btn-outline-info">
+   Retourner au sommaire</a>
+</div>
+
 <div class="container" *ngIf='cours!=undefined'>
   <div class="col-sm-12 pb-5"><h1>{{cours.titre}}</h1></div>
   <div class="card border-primary text-primary col-sm-12 mb-5 p-3"><h5>{{cours.description}}</h5></div>
@@ -9,3 +14,6 @@
     </video>
   </div>
 </div>
+
+
+
