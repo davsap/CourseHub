@@ -10,7 +10,6 @@ import { DashboardComponent} from './content/formation/dashboard/dashboard.compo
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { FormationDetailComponent } from './content/formation/formation-detail/formation-detail.component';
 import { FormationFormComponent } from './content/formation/formation-form/formation-form.component';
-import { SujetListComponent } from './content/formation/sujet/sujet-list/sujet-list.component';
 import { FormationAdminComponent } from './content/formation/formation-admin/formation-admin.component';
 import { CoursDetailComponent } from './content/formation/sujet/cours/cours-detail/cours-detail.component';
 import { SujetFormComponent } from './content/formation/sujet/sujet-form/sujet-form.component';
@@ -40,7 +39,7 @@ const appRoutes: Routes = [
    { path: 'formationupdate/:id/sujet/:ids/cours',  component: CoursFormComponent },
   { path: 'formationupdate/:id/sujet/:ids/cours/:idc',  component: CoursFormComponent },
   // { path: 'formation/:id/sujet/:ids/cours/:idc',  component: CoursDetailComponent},
-  { path: 'formationupdate/:id/sujet',  component: SujetFormComponent }
+  { path: 'formationupdate/:id/sujet',  component: SujetFormComponent },
   { path: 'formationupdate/:id/sujet/:ids',  component: SujetFormComponent }
   // ************************************************************************************
 ];
