@@ -7,7 +7,8 @@
 
 # dependencies
 /node_modules
-
+# mediafiles 
+/src/assets/videos
 # IDEs and editors
 /.idea
 .project
