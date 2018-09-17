@@ -3,6 +3,8 @@ import { Observable } from '../../../../../node_modules/rxjs';
 import { FormationService } from '../../../services/formation.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Formation } from '../../../model/formation';
+import { CookieService } from '../../../../../node_modules/ngx-cookie-service';
+import { User } from '../../../model/user';
 /* /import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';*/
 
 @Component({
@@ -14,11 +16,13 @@ export class UpdateFormationComponent implements OnInit {
 
 closeResult: Boolean;
 /*, private modalService: NgbModal*/
-constructor(private service: FormationService, private route: ActivatedRoute, private router: Router ) { }
+constructor(private service: FormationService, private route: ActivatedRoute, private router: Router,
+  private cookieService: CookieService) { }
 formation: Observable<Formation>;
 // formation: Formation;
-
+user: User;
 ngOnInit() {
+  this.user = JSON.parse(this.cookieService.get('user'));
   const id = +this.route.snapshot.paramMap.get('id');
  this.service.getFormationV2(id).subscribe((value: Observable<Formation>) => this.formation = value);
   // this.service.getFormationV2(id).subscribe((value: Formation) => this.formation = value);
@@ -43,7 +47,8 @@ ngOnInit() {
 
   deleteFormation() {
     const id: String =  this.route.snapshot.paramMap.get('id');
-    this.service.delete(id);
+    this.service.delete(id).subscribe(_ => {
+      window.location.href = '/dashboard/' + this.user.id; });
    }
 
    updateModule(id: any) {

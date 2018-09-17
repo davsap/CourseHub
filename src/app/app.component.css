@@ -20,7 +20,7 @@ html,body {
 }
 
 #sidebar.expanded {
-    width: 15%;
+    width: 20%;
 }
 
 #sidebar.expanded + #sidebar-toggle i {
@@ -41,7 +41,7 @@ html,body {
 }
 
 #sidebar.expanded ~ #content {
-    width: 85%;
+    width: 80%;
 }
 
 #sidebar.expanded ~ #content #sidebar-toggle i {
@@ -84,6 +84,5 @@ footer {
 .ng-sidebar-container{
     height: 100vh;
 }
-      
-  
 
+      

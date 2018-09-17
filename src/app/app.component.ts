@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormationService } from './services/formation.service';
+import { Formation } from './model/formation';
 
 
 @Component({
@@ -8,9 +10,15 @@ import { Component } from '@angular/core';
 
   })
 // comment
-export class AppComponent {
+export class AppComponent implements OnInit {
+  formations: Formation[];
     private toggleSideBar() {
       document.getElementById('sidebar').classList.toggle('expanded');
     }
 
+    constructor(private service: FormationService) {}
+
+ngOnInit() {
+  this.service.getFormationsV2().subscribe((value: Formation[]) => this.formations = value);
+}
 }

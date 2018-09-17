@@ -4,6 +4,7 @@ import { matchOtherValidator } from './MatchOtherValidator';
 import { User } from '../../model/user';
 import { UserService } from '../../services/user.service';
 
+
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.component.html',
@@ -56,7 +57,8 @@ export class InscriptionComponent implements OnInit {
     this.signinForm.get('pays').value,
     null
   );
-  this.service.addUser(this.user);
+  this.service.addUser(this.user).subscribe(_ =>
+  window.location.href = '/login');
   }
 
   get id() {

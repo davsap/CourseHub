@@ -74,10 +74,9 @@ formations2: Observable<Formation[]>;
     this.http.post('http://localhost:8080/CourseHub/api/formations', formation2).subscribe(console.log);
   }
 
-  delete(id: String): void {
-    this.http.delete(`http://localhost:8080/CourseHub/api/formations/${id}`).subscribe(console.log);
+  delete(id: String): any {
+    return this.http.delete(`http://localhost:8080/CourseHub/api/formations/${id}`);
   }
-
   getLatest(): Observable<Formation[]> {
      this.formations =  new Array(2);
       for (let i = 0; i < 2; i++) {

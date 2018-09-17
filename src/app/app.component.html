@@ -7,14 +7,14 @@
       
         <ul class="nav flex-column grey lighten-4 py-4">
 
-            <li class="sidebar-nav">
+            <li class="sidebar-nav pr-2">
                 <a class="nav-link" routerLink="/formation">Formations </a>
+                <ul *ngFor="let formation of formations">
+                    <li><a routerLink="/formation/{{formation.id}}">{{formation.titre}}</a></li>
+                </ul>
             </li>
             <li class="sidebar-nav">
                 <a class="nav-link active" routerLink="/signin">Inscription </a>
-            </li>
-            <li class="sidebar-nav"><a class="nav-link"  routerLink='/sujetform' >Module</a>  
-                
             </li>
             <li class="sidebar-nav">
                 <a class="nav-link disabled" href="#!">Logout </a>

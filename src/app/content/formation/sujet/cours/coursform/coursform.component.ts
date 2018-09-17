@@ -17,7 +17,7 @@ export class CoursFormComponent implements OnInit {
       coursvideo: [null , [Validators.required]]
     });
 cours: Cours;
-isUpdate:Boolean = false;
+isUpdate: Boolean = false;
 
   constructor(private fb: FormBuilder, private service: CoursService, private route: ActivatedRoute) {
 
@@ -46,7 +46,7 @@ isUpdate:Boolean = false;
       const ids = +this.route.snapshot.paramMap.get('ids');
       let pathFile: String;
       pathFile = this.coursForm.get('coursvideo').value;
-      pathFile = 'assets/videos/' +  pathFile.substring(pathFile.lastIndexOf('\\') + 1, pathFile.length);
+      pathFile = '/assets/videos/' +  pathFile.substring(pathFile.lastIndexOf('\\') + 1, pathFile.length);
 /*       test.lastIndexOf('\\');
        console.log('helooooodsdash  : ' +);
  */      this.cours = new Cours(null,

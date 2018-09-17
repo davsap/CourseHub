@@ -21,7 +21,7 @@ export class FormationFormComponent implements OnInit {
   formation: Formation;
   userMock: User;
   user: User;
-  isUpdate:Boolean = false;
+  isUpdate: Boolean = false;
 
   constructor(private fb: FormBuilder, private service: FormationService, private cookieService: CookieService,
      private route: ActivatedRoute) {
@@ -50,16 +50,20 @@ export class FormationFormComponent implements OnInit {
 
     let pathFile: String;
     pathFile = this.formationForm.get('imageFormation').value;
-    pathFile = 'assets/images/' +  pathFile.substring(pathFile.lastIndexOf('\\') + 1, pathFile.length);
+
+    if (pathFile) {
+        pathFile = 'assets/images/' +  pathFile.substring(pathFile.lastIndexOf('\\') + 1, pathFile.length);
+    }
 
     this.formation = new Formation(
     null,
     this.formationForm.get('titre').value,
     this.formationForm.get('description').value,
     this.formationForm.get('date').value,
-    pathFile.toString() ,
+    pathFile ? pathFile.toString() : null ,
     this.userMock);
     this.service.addFormation(this.formation);
+    window.location.href = '/dashboard/' + this.user.id;
   }
 
 get id() {

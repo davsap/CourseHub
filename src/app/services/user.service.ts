@@ -22,8 +22,8 @@ export class UserService {
 // logedUser: Observable<User>;
   constructor(private http: HttpClient, private cookieService: CookieService) { }
 
-  addUser(user: User): void {
-    this.http.post('http://localhost:8080/CourseHub/api/users', user).subscribe(console.log);
+  addUser(user: User): any {
+    return this.http.post('http://localhost:8080/CourseHub/api/users', user);
   }
 
  /*  logUser(user: User): void {
